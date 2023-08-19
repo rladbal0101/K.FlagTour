@@ -1,24 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
+
+const GlobalStyled = createGlobalStyle`
+  ${reset}
+
+  body {
+    box-sizing: border-box;
+  }
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyled />
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={undefined} />
+          <Route path='/about_us' element={undefined}>
+            <Route path='company_introduction' element={undefined} />
+            <Route path='ceo_greetings' element={undefined} />
+            <Route path='awards' element={undefined} />
+            <Route path='contacts' element={undefined} />
+          </Route>
+          <Route path='/mice' element={undefined} />
+          <Route path='/signtseeing_tour' element={undefined}>
+            <Route path='classic_tour' element={undefined} />
+            <Route path='theme_tour' element={undefined} />
+            <Route path='one_day_tour' element={undefined} />
+          </Route>
+          <Route path='/medical_tour' element={undefined} />
+          <Route path='/useful_information' element={undefined} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
