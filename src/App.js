@@ -5,6 +5,7 @@ import Layout from './components/Layout';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import Main from './pages/Main';
+import AboutUs from './pages/AboutUs';
 
 const GlobalStyled = createGlobalStyle`
   ${reset}
@@ -25,7 +26,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path='/about_us' element={undefined}>
+          <Route path='/about_us' element={<AboutUs />}>
             <Route path='company_introduction' element={undefined} />
             <Route path='ceo_greetings' element={undefined} />
             <Route path='awards' element={undefined} />
