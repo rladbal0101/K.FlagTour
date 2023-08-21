@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { TbWorld } from "react-icons/tb";
 import dayjs from "dayjs";
@@ -105,11 +105,11 @@ function Layout(props) {
 
         <NavStyle>
           <ul>
-            <li><StyledLink>About us</StyledLink></li>
-            <li><StyledLink>MICE</StyledLink></li>
-            <li><StyledLink>Sightseeing Tours</StyledLink></li>
-            <li><StyledLink>Medical Tours</StyledLink></li>
-            <li><StyledLink>Useful Information</StyledLink></li>
+            <li><StyledLink to={'/about_us'}>About us</StyledLink></li>
+            <li><StyledLink to={'/mice'}>MICE</StyledLink></li>
+            <li><StyledLink to={'/signtseeing_tour'}>Sightseeing Tours</StyledLink></li>
+            <li><StyledLink to={'/medical_tour'}>Medical Tours</StyledLink></li>
+            <li><StyledLink to={'/useful_information'}>Useful Information</StyledLink></li>
           </ul>
         </NavStyle>
 
