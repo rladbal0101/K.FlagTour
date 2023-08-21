@@ -57,7 +57,7 @@ const FooterStyle = styled(HeaderStyle)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 14px;
   padding: 20px;
 
   ul {
@@ -69,6 +69,10 @@ const FooterStyle = styled(HeaderStyle)`
   li {
     padding-bottom: 30px;
     }
+
+  li + li {
+    margin-left: 30px;
+  }
   `;
 
 const StyledLink = styled(NavLink)`
@@ -76,12 +80,12 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   padding: 10px 0;
   border-bottom: 3px solid transparent;
+
   &:hover {
     /* font-weight: bold; */
     border-bottom: 3px solid #F37500;
     /* transform: scale(1.1); */
     transition: all 0.5s ease;
-
   }
 `;
 
