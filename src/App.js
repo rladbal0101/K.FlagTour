@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import Main from './pages/Main';
 
 const GlobalStyled = createGlobalStyle`
   ${reset}
@@ -23,7 +24,7 @@ function App() {
       <GlobalStyled />
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route index element={undefined} />
+          <Route index element={<Main />} />
           <Route path='/about_us' element={undefined}>
             <Route path='company_introduction' element={undefined} />
             <Route path='ceo_greetings' element={undefined} />
