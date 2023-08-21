@@ -40,20 +40,73 @@ const HeaderStyle = styled.div`
 `;
 
 const NavStyle = styled.nav`
-  width: 100%;
+  /* width: 60%; */
+  width: 1080px;
   font-size: 14px;
-  padding: 20px;
+  /* padding: 20px; */
 
-  ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  ul.gnb-depth1 {
     display: flex;
     justify-content: space-between;
+
+    li {
+      outline: none;
+      font-weight: normal;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      position: relative;
+    }
+  }
+`;
+
+const StyledLink = styled(NavLink)`
+  color: #000;
+  text-decoration: none;
+  padding: 32px 10px;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    border-bottom: 2px solid #F37500;
+    transition: all 0.5s ease;
+  }
+`;
+
+const StyledSubMenu = styled.div`
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 80px;
+  padding: 0 10px;
+  
+  display: none;
+  
+  ul.gnb-depth2 {
+    width: 100%;
+    background-color: rgba(200, 200, 200, 0.5);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   li {
-    outline: none;
-    font-weight: normal;
+    padding: 10px 0;
   }
-  `;
+`;
+
+const StyledSubMenuLink = styled(NavLink)`
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+`;
 
 const FooterStyle = styled.div`
   background-color: antiquewhite;
@@ -80,20 +133,6 @@ const FooterStyle = styled.div`
   }
   `;
 
-const StyledLink = styled(NavLink)`
-  color: #000;
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 3px solid transparent;
-
-  &:hover {
-    border-bottom: 3px solid #F37500;
-    /* font-weight: bold; */
-    /* transform: scale(1.1); */
-    transition: all 0.5s ease;
-  }
-`;
-
 function Layout(props) {
   let now = dayjs();
 
@@ -109,12 +148,60 @@ function Layout(props) {
         <h1 className='cursor-pointer' onClick={() => navigate('/')}> K.Flag Tour </h1>
 
         <NavStyle>
-          <ul>
-            <li><StyledLink to={'/about_us'}>About us</StyledLink></li>
-            <li><StyledLink to={'/mice'}>MICE</StyledLink></li>
-            <li><StyledLink to={'/signtseeing_tour'}>Sightseeing Tours</StyledLink></li>
-            <li><StyledLink to={'/medical_tour'}>Medical Tours</StyledLink></li>
-            <li><StyledLink to={'/useful_information'}>Useful Information</StyledLink></li>
+          <ul className='gnb-depth1'>
+            <li className='gnb-depth1-item'>
+              <StyledLink to={'/about_us'}>About us</StyledLink>
+              <StyledSubMenu>
+                <ul className='gnb-depth2'>
+                  <li>
+                    <StyledSubMenuLink>Company introduction</StyledSubMenuLink>
+                  </li>
+                  <li>
+                    <StyledSubMenuLink>CEO greetings</StyledSubMenuLink>
+                  </li>
+                  <li>
+                    <StyledSubMenuLink>Awards</StyledSubMenuLink>
+                  </li>
+                  <li>
+                    <StyledSubMenuLink>Contacts</StyledSubMenuLink>
+                  </li>
+                </ul>
+              </StyledSubMenu>
+            </li>
+            <li className='gnb-depth1-item'>
+              <StyledLink to={'/mice'}>MICE</StyledLink>
+              {/* <StyledSubMenu>
+                <ul className='gnb-depth2'>
+                  <li><StyledSubMenuLink>MICE</StyledSubMenuLink></li>
+                </ul>
+              </StyledSubMenu> */}
+            </li>
+            <li className='gnb-depth1-item'>
+              <StyledLink to={'/signtseeing_tour'}>Sightseeing Tours</StyledLink>
+              <StyledSubMenu>
+                <ul className='gnb-depth2'>
+                  <li><StyledSubMenuLink>classic tour</StyledSubMenuLink></li>
+                  <li><StyledSubMenuLink>theme tour</StyledSubMenuLink></li>
+                  <li><StyledSubMenuLink>one day tour</StyledSubMenuLink></li>
+                </ul>
+              </StyledSubMenu>
+            </li>
+            <li className='gnb-depth1-item'>
+              <StyledLink to={'/medical_tour'}>Medical Tours</StyledLink>
+              {/* <StyledSubMenu>
+                <ul className='gnb-depth2'>
+                  <li><StyledSubMenuLink>Medical tours</StyledSubMenuLink></li>
+                </ul>
+              </StyledSubMenu> */}
+            </li>
+            <li className='gnb-depth1-item'>
+              <StyledLink to={'/useful_information'}>Useful Information</StyledLink>
+              {/* <StyledSubMenu>
+                <ul className='gnb-depth2'>
+                  <li><StyledSubMenuLink>Useful Information</StyledSubMenuLink></li>
+                </ul>
+              </StyledSubMenu> */}
+            </li>
           </ul>
         </NavStyle>
 
