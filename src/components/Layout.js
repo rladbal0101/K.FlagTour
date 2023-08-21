@@ -17,6 +17,7 @@ const HeaderStyle = styled.div`
   align-items: center;
 
   position: fixed;
+  z-index: 9;
 
   h1 {
     margin: 0 30px;
@@ -26,7 +27,7 @@ const HeaderStyle = styled.div`
 
   svg {
     font-size: 20px;
-    /* margin: 0 20px; */
+    margin: 0 30px;
 
     &:hover {
       /* color: red; */
