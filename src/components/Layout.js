@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import { TbWorld } from "react-icons/tb";
+import dayjs from "dayjs";
 
 const LayoutStyle = styled.div`
 `;
@@ -51,7 +52,23 @@ const NavStyle = styled.nav`
 
 const FooterStyle = styled(HeaderStyle)`
   background-color: antiquewhite;
-  height: 120px;
+  /* height: 120px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 20px;
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  li {
+    padding-bottom: 30px;
+    }
   `;
 
 const StyledLink = styled(NavLink)`
@@ -64,10 +81,17 @@ const StyledLink = styled(NavLink)`
     border-bottom: 3px solid #F37500;
     /* transform: scale(1.1); */
     transition: all 0.5s ease;
+
   }
 `;
 
 function Layout(props) {
+  let now = dayjs();
+
+  now.format();
+
+  const thisYear = now.get("year")
+
   return (
     <LayoutStyle>
       <HeaderStyle>
@@ -89,7 +113,11 @@ function Layout(props) {
       <Outlet />
 
       <FooterStyle>
-
+        <ul>
+          <li>11, Uisadang-daero 1-gil, Yeongdeungpo-gu, Seoul, Republic of Korea</li>
+          <li>TEL : 02-786-0978</li>
+        </ul>
+        <p>Copyright © {thisYear} K.Flag Tour. All Right Reserved.</p>
       </FooterStyle>
     </LayoutStyle>  
   );
