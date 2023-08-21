@@ -23,6 +23,10 @@ const HeaderStyle = styled.div`
     margin: 0 30px;
     font-size: 20px;
     font-weight: 700;
+
+    &:hover {
+      color: red;
+    }
   }
 
   svg {
@@ -30,7 +34,7 @@ const HeaderStyle = styled.div`
     margin: 0 30px;
 
     &:hover {
-      /* color: red; */
+      color: red;
     }
   }
 `;
@@ -39,7 +43,6 @@ const NavStyle = styled.nav`
   width: 100%;
   font-size: 14px;
   padding: 20px;
-  /* flex: 1; */
 
   ul {
     display: flex;
@@ -52,16 +55,15 @@ const NavStyle = styled.nav`
   }
   `;
 
-const FooterStyle = styled(HeaderStyle)`
+const FooterStyle = styled.div`
   background-color: antiquewhite;
-  width: 100%;
-  /* height: 120px; */
+  font-size: 14px;
+  padding: 20px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  padding: 20px;
 
   ul {
     display: flex;
@@ -99,10 +101,12 @@ function Layout(props) {
 
   const thisYear = now.get("year")
 
+  const navigate = useNavigate();
+
   return (
     <LayoutStyle>
       <HeaderStyle>
-        <h1> K.Flag Tour </h1>
+        <h1 className='cursor-pointer' onClick={() => navigate('/')}> K.Flag Tour </h1>
 
         <NavStyle>
           <ul>
@@ -114,7 +118,7 @@ function Layout(props) {
           </ul>
         </NavStyle>
 
-        <TbWorld />
+        <TbWorld className='cursor-pointer' />
       </HeaderStyle>
 
       <Outlet />
