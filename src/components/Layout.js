@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import { TbWorld } from "react-icons/tb";
 
@@ -16,13 +16,13 @@ const HeaderStyle = styled.div`
 
   h1 {
     margin: 0 30px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
   }
 
   svg {
     font-size: 20px;
-    margin: 0 20px;
+    /* margin: 0 20px; */
 
     &:hover {
       /* color: red; */
@@ -31,39 +31,41 @@ const HeaderStyle = styled.div`
 `;
 
 const NavStyle = styled.nav`
-  font-size: 20px;
+  width: 100%;
+  font-size: 14px;
   padding: 20px;
   /* flex: 1; */
 
   ul {
     display: flex;
+    justify-content: space-between;
   }
 
   li {
-    &:hover {
-      font-weight: 600;
-      /* border-bottom: 3px solid red; */
-    }
-
-    /* &:hover::after {
-      content: "";
-      display: block;
-      padding-bottom: 20px;
-      margin-bottom: 20px;
-      border-bottom: 3px solid red;
-    } */
+    /* border: 3px solid; */
+    outline: none;
+    font-weight: normal;
+    
   }
-
-  li + li {
-    margin-left: 100px;
-  }
-`
+  `;
 
 const FooterStyle = styled(HeaderStyle)`
   background-color: antiquewhite;
   height: 120px;
-`;
+  `;
 
+const StyledLink = styled(NavLink)`
+  color: #000;
+  text-decoration: none;
+  padding: 10px 0;
+  border-bottom: 3px solid transparent;
+  &:hover {
+    /* font-weight: bold; */
+    border-bottom: 3px solid #F37500;
+    /* transform: scale(1.1); */
+    transition: all 0.5s ease;
+  }
+`;
 
 function Layout(props) {
   return (
@@ -73,11 +75,11 @@ function Layout(props) {
 
         <NavStyle>
           <ul>
-            <li> About us </li>
-            <li> MICE </li>
-            <li> Sightseeing Tours </li>
-            <li> Medical Tours </li>
-            <li> Useful Information </li>
+            <li><StyledLink>About us</StyledLink></li>
+            <li><StyledLink>MICE</StyledLink></li>
+            <li><StyledLink>Sightseeing Tours</StyledLink></li>
+            <li><StyledLink>Medical Tours</StyledLink></li>
+            <li><StyledLink>Useful Information</StyledLink></li>
           </ul>
         </NavStyle>
 
