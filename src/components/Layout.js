@@ -8,12 +8,15 @@ const LayoutStyle = styled.div`
 `;
 
 const HeaderStyle = styled.div`
-  background-color: beige;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
   height: 80px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: fixed;
 
   h1 {
     margin: 0 30px;
@@ -43,10 +46,8 @@ const NavStyle = styled.nav`
   }
 
   li {
-    /* border: 3px solid; */
     outline: none;
     font-weight: normal;
-    
   }
   `;
 
@@ -59,6 +60,7 @@ const FooterStyle = styled(HeaderStyle)`
   align-items: center;
   font-size: 14px;
   padding: 20px;
+  position: relative;
 
   ul {
     display: flex;
@@ -82,8 +84,8 @@ const StyledLink = styled(NavLink)`
   border-bottom: 3px solid transparent;
 
   &:hover {
-    /* font-weight: bold; */
     border-bottom: 3px solid #F37500;
+    /* font-weight: bold; */
     /* transform: scale(1.1); */
     transition: all 0.5s ease;
   }

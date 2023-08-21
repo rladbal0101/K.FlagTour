@@ -12,21 +12,19 @@ import "swiper/css/scrollbar";
 const MainWrapper = styled.div`
   width: 100%;
   height: 100vh;
-  /* position: fixed; */
-  /* top: 0; */
-  /* background-color: orange; */
+  background-color: orange;
 `;
 
 const StyledSwiper = styled(Swiper)`
   width: 100%;
   height: 100%;
-
 `;
 
 const StyledSwiperSlide = styled(SwiperSlide)`
-  img {
+  
+  /* img {
     width: 100%;
-  }
+  } */
 `;
 
 function Main(props) {
