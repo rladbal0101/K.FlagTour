@@ -2,26 +2,26 @@ import React from 'react';
 import styled from 'styled-components';
 import SubPageStyle from '../components/SubPageStyle';
 
-import image from '../images/광화문2.jpg';
+import image from '../images/경주 첨성대.jpg';
 import { Outlet } from 'react-router';
 
-const AboutUsStyled = styled.div`
+const UsefulInformationStyled = styled.div`
 
 `
 
-function AboutUs(props) {
+function UsefulInformation(props) {
   return (
     <>
       <SubPageStyle 
-        title={'About us'} 
+        title={'Useful Information'} 
         photo={image} 
       />
 
-      <AboutUsStyled>
+      <UsefulInformationStyled>
         <Outlet />
-      </AboutUsStyled>
+      </UsefulInformationStyled>
     </>
   );
 }
 
-export default AboutUs;
+export default UsefulInformation;

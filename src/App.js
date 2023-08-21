@@ -6,6 +6,10 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import Main from './pages/Main';
 import AboutUs from './pages/AboutUs';
+import Mice from './pages/Mice';
+import SightseeingTours from './pages/SightseeingTours';
+import MedicalTours from './pages/MedicalTours';
+import UsefulInformation from './pages/UsefulInformation';
 
 const GlobalStyled = createGlobalStyle`
   ${reset}
@@ -32,14 +36,14 @@ function App() {
             <Route path='awards' element={undefined} />
             <Route path='contacts' element={undefined} />
           </Route>
-          <Route path='/mice' element={undefined} />
-          <Route path='/signtseeing_tour' element={undefined}>
+          <Route path='/mice' element={<Mice />} />
+          <Route path='/signtseeing_tour' element={<SightseeingTours />}>
             <Route path='classic_tour' element={undefined} />
             <Route path='theme_tour' element={undefined} />
             <Route path='one_day_tour' element={undefined} />
           </Route>
-          <Route path='/medical_tour' element={undefined} />
-          <Route path='/useful_information' element={undefined} />
+          <Route path='/medical_tour' element={<MedicalTours/>} />
+          <Route path='/useful_information' element={<UsefulInformation />} />
         </Route>
       </Routes>
     </>
