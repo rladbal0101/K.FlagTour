@@ -54,6 +54,7 @@ const NavStyle = styled.nav`
 
 const FooterStyle = styled(HeaderStyle)`
   background-color: antiquewhite;
+  width: 100%;
   /* height: 120px; */
   display: flex;
   flex-direction: column;
@@ -61,7 +62,6 @@ const FooterStyle = styled(HeaderStyle)`
   align-items: center;
   font-size: 14px;
   padding: 20px;
-  position: relative;
 
   ul {
     display: flex;
