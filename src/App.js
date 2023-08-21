@@ -11,7 +11,11 @@ const GlobalStyled = createGlobalStyle`
   body {
     box-sizing: border-box;
   }
-`
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+`;
 
 function App() {
   return (
