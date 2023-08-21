@@ -62,7 +62,6 @@ const FooterStyle = styled(HeaderStyle)`
   align-items: center;
   font-size: 14px;
   padding: 20px;
-  position: relative;
 
   ul {
     display: flex;
