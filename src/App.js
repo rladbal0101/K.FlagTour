@@ -25,6 +25,14 @@ const GlobalStyled = createGlobalStyle`
   .cursor-pointer {
     cursor: pointer;
   }
+
+  @media screen and (max-width: 768px) {
+    
+  }
+
+  @media screen and (max-width: 375px) {
+
+  }
 `;
 
 function App() {

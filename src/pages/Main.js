@@ -25,7 +25,6 @@ import imgData from "../dataMainSlideImg.json";
 const MainWrapper = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: orange;
 `;
 
 const StyledSwiper = styled(Swiper)`
