@@ -10,6 +10,10 @@ import Mice from './pages/Mice';
 import SightseeingTours from './pages/SightseeingTours';
 import MedicalTours from './pages/MedicalTours';
 import UsefulInformation from './pages/UsefulInformation';
+import CompanyIntroduction from './pages/aboutUs/CompanyIntroduction';
+import CeoGreetings from './pages/aboutUs/CeoGreetings';
+import Award from './pages/aboutUs/Award';
+import Contacts from './pages/aboutUs/Contacts';
 
 const GlobalStyled = createGlobalStyle`
   ${reset}
@@ -30,11 +34,12 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path='/about_us' element={<AboutUs />}>
-            <Route path='company_introduction' element={undefined} />
-            <Route path='ceo_greetings' element={undefined} />
-            <Route path='awards' element={undefined} />
-            <Route path='contacts' element={undefined} />
+          <Route path='/about_us/' element={<AboutUs />}>
+            <Route index element={<CompanyIntroduction />} />
+            <Route path='company_introduction' element={<CompanyIntroduction />} />
+            <Route path='ceo_greetings' element={<CeoGreetings />} />
+            <Route path='awards' element={<Award />} />
+            <Route path='contacts' element={<Contacts />} />
           </Route>
           <Route path='/mice' element={<Mice />} />
           <Route path='/signtseeing_tour' element={<SightseeingTours />}>

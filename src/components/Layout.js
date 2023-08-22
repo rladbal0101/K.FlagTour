@@ -150,7 +150,7 @@ function Layout(props) {
         <NavStyle>
           <ul className='gnb-depth1'>
             <li className='gnb-depth1-item'>
-              <StyledLink to={'/about_us'}>About us</StyledLink>
+              <StyledLink to={'/about_us/company_introduction'}>About us</StyledLink>
               <StyledSubMenu>
                 <ul className='gnb-depth2'>
                   <li>
