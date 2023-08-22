@@ -40,8 +40,8 @@ const HeaderStyle = styled.div`
 `;
 
 const NavStyle = styled.nav`
-  /* width: 60%; */
-  width: 1080px;
+  width: 60%;
+  /* width: 1080px; */
   font-size: 14px;
   /* padding: 20px; */
 
@@ -55,14 +55,14 @@ const NavStyle = styled.nav`
     display: flex;
     justify-content: space-between;
 
-    li {
+    & > li.gnb-depth1-item {
       outline: none;
       font-weight: normal;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      position: relative;
+      
     }
   }
 `;
@@ -73,28 +73,71 @@ const StyledLink = styled(NavLink)`
   padding: 32px 10px;
   border-bottom: 2px solid transparent;
 
-  &:hover {
-    border-bottom: 2px solid #F37500;
-    transition: all 0.5s ease;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #F37500;
+
+    position: absolute;
+    top: 77px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.3s;
+
+  }
+
+  &:hover::after{
+    width: 100%;
+  }
+
+  &:hover + .sub-menu{
+    /* display: block; */
+    /* height: 150px; */
+    opacity: 1;
+
+    &:hover {
+      display: block;
+    }
+    
+    .gnb-depth2 {
+      opacity: 1;
+
+      /* &:hover {
+        opacity: 1;
+
+      } */
+    }
   }
 `;
 
 const StyledSubMenu = styled.div`
   width: 200px;
-  height: 100%;
+  /* height: 0; */
+  background-color: rgba(200, 200, 200, 0.5);
+  padding: 0 10px;
   position: absolute;
   top: 80px;
-  padding: 0 10px;
   
-  display: none;
+  transition: all 0.3s;
+
+  opacity: 0;
+
+  /* display: none; */
   
   ul.gnb-depth2 {
     width: 100%;
-    background-color: rgba(200, 200, 200, 0.5);
-    
+    text-align: center;
+    /* opacity: 0; */
+    transition: all 0.3s;
+  /* 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
   }
 
   li {
@@ -151,7 +194,7 @@ function Layout(props) {
           <ul className='gnb-depth1'>
             <li className='gnb-depth1-item'>
               <StyledLink to={'/about_us/company_introduction'}>About us</StyledLink>
-              <StyledSubMenu>
+              <StyledSubMenu className='sub-menu'>
                 <ul className='gnb-depth2'>
                   <li>
                     <StyledSubMenuLink>Company introduction</StyledSubMenuLink>
@@ -178,7 +221,7 @@ function Layout(props) {
             </li>
             <li className='gnb-depth1-item'>
               <StyledLink to={'/signtseeing_tour'}>Sightseeing Tours</StyledLink>
-              <StyledSubMenu>
+              <StyledSubMenu className='sub-menu'>
                 <ul className='gnb-depth2'>
                   <li><StyledSubMenuLink>classic tour</StyledSubMenuLink></li>
                   <li><StyledSubMenuLink>theme tour</StyledSubMenuLink></li>
