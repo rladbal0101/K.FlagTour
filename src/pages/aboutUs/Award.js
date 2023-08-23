@@ -9,7 +9,31 @@ const AwardStyle = styled.div`
   span {
     padding-right: 20px;
   }
-`
+  `;
+
+const AwardImg = styled.div`
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+`;
+
+const ImgStyle = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  img {
+    width: 300px;
+    margin: 20px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+`;
 
 function Award(props) {
   return (
@@ -44,6 +68,16 @@ function Award(props) {
         <span>2014</span>
         <p>Award for Korea Sharing 2014</p>
       </AwardStyle>
+
+      <AwardImg>
+        <ImgStyle>
+          <img src='http://janedmc.cafe24.com/wp-content/uploads/2021/09/Awards-1.png' />
+          <img src='http://janedmc.cafe24.com/wp-content/uploads/2021/09/awards2.jpg' />
+          <img src='http://janedmc.cafe24.com/wp-content/uploads/2021/09/awards-3.jpg' />
+          <img src='http://janedmc.cafe24.com/wp-content/uploads/2021/09/awards-4.jpg' />
+          <img src='http://janedmc.cafe24.com/wp-content/uploads/2021/09/awards-5.jpg' />
+        </ImgStyle>
+      </AwardImg>
     </>
   );
 }
