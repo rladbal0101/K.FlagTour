@@ -1,7 +1,6 @@
-import { Status, Wrapper } from '@googlemaps/react-wrapper';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import styled from 'styled-components';
-import ContactsMap from '../../components/aboutUs/ContactsMap';
+import { GoogleMap, LoadScriptNext, MarkerF } from '@react-google-maps/api';
 
 const MapStyle = styled.div`
   margin: 150px 0;
@@ -10,6 +9,13 @@ const MapStyle = styled.div`
     font-size: 22px;
     font-weight: 700;
     padding: 20px 0;
+  }
+`;
+
+const MapWrapper = styled.div`
+  .map-container {
+    width: 80%;
+    height: 270px;
   }
 `;
 
@@ -33,44 +39,26 @@ const TextArea = styled.div`
 `;
 
 function Contacts(props) {
-  const [marker, setMarker] = useState(null);
-
-  // const render = (Status : Status) => {
-  //   return <h1>{Status}</h1>
-  // };
-
-  const Marker = (options) => {
-    useEffect(() => {
-      if (!marker) {
-        marker.setMap(null);
-      };
   
-      return () => {
-        if (marker) {
-          marker.setMap(null);
-        }
-      };
-    }, [marker]);
-  
-    useEffect(() => {
-      if (marker) {
-        marker.setOptions(options);
-      }
-    }, [marker, options]);
-    return null;
-  };
+  const center = useMemo(() => ({lat: 37.519203186035156, lng: 126.92858123779297}), [])
+
+  const apiKey = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
 
   return (
     <MapStyle>
       <h3>본사</h3>
-      <Wrapper
-        apiKey={'AIzaSyBG5fsredbEt1FTtZN0qu_vMe2YtVwWqRM'}
-        libraries={"place"}
-        >
-        <ContactsMap>
-          {/* <Marker position={position} /> */}
-        </ContactsMap>
-      </Wrapper>
+
+      <MapWrapper>
+        <LoadScriptNext googleMapsApiKey={apiKey}>
+          <GoogleMap 
+            zoom={18} 
+            center={center} 
+            mapContainerClassName='map-container'
+          >
+            <MarkerF position={center} />
+          </GoogleMap>
+        </LoadScriptNext>
+      </MapWrapper>
 
       <TextArea>
         <span> 주소: &nbsp; </span>

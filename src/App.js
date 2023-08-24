@@ -14,6 +14,8 @@ import CeoGreetings from './pages/aboutUs/CeoGreetings';
 import Award from './pages/aboutUs/Award';
 import Contacts from './pages/aboutUs/Contacts';
 
+// const apiKey = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
+
 const GlobalStyled = createGlobalStyle`
   ${reset}
 
