@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import SubPageStyle from '../components/SubPageStyle';
 
@@ -57,11 +57,17 @@ const SubCategory = styled(NavLink)`
 `;
 
 function AboutUs(props) {
+  const [isClicked, setIsClicked] = useState(false);
+
   const aboutImg  = subPageImg.find((img) => {
     if(img.title === 'About us') {
       return img;
     }
-  })
+  });
+
+  const handleClicked = (e) => {
+    setIsClicked(true);
+  }
 
 
   return (
@@ -73,7 +79,7 @@ function AboutUs(props) {
 
       <AboutUsStyled>
         <ul>
-          <li><SubCategory to={'/about_us/company_introduction'}>Company introduction</SubCategory></li>
+          <li onClick={handleClicked}><SubCategory to={'/about_us/company_introduction'}>Company introduction</SubCategory></li>
           <li><SubCategory to={'/about_us/ceo_greetings'}>CEO greetings</SubCategory></li>
           <li><SubCategory to={'/about_us/awards'}>Awards</SubCategory></li>
           <li><SubCategory to={'/about_us/contacts'}>Contacts</SubCategory></li>
