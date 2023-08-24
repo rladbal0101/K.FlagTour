@@ -20,7 +20,7 @@ import image7 from "../images/롯데타워2.jpg";
 import image8 from "../images/경복궁-향원정 겨울.jpg";
 import image9 from "../images/제주 한라산.jpg";
 
-import imgData from "../dataMainSlideImg.json";
+import imgData from "../data/dataMainSlideImg.json";
 
 const MainWrapper = styled.div`
   width: 100%;
