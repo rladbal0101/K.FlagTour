@@ -18,7 +18,9 @@ const GlobalStyled = createGlobalStyle`
   ${reset}
 
   body {
-    font-family: 'GmarketSansMedium';
+    font-family: 'SUIT-Regular';
+    line-height: 1.4; /* 행간 설정 */
+    letter-spacing : 0.5px; /* 자간 설정 */
     box-sizing: border-box;
   }
 
