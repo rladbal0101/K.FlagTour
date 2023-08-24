@@ -14,7 +14,6 @@ const CeoGreetingStyle = styled.div`
 
   .contents {
     padding-left: 50px;
-    line-height: 18px;
   }
 `
 

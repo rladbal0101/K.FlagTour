@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const AwardStyle = styled.div`
   display: flex;
   margin-bottom: 10px;
-  line-height: 18px;
 
   span {
     padding-right: 20px;

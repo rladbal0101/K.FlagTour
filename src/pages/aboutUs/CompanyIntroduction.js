@@ -8,10 +8,6 @@ const OurServices = styled.div`
     margin: 100px 0 50px;
   }
 
-  p {
-    line-height: 18px;
-  }
-
   p + p {
     padding-top: 20px;
   }
