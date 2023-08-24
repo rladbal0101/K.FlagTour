@@ -59,6 +59,7 @@ function Main(props) {
 
   return (
     <MainWrapper>
+      {/* <img src={imageFile[0]} /> */}
       <StyledSwiper
         modules={[Navigation, Pagination, Scrollbar, Autoplay]}
         loop={true}
@@ -74,6 +75,12 @@ function Main(props) {
             <img src={image1} /><p>한옥마을</p>
           </StyledSwiperSlide>
           <StyledSwiperSlide>
+            <img src={imageFile[0]} /><p>1111</p>
+          </StyledSwiperSlide>
+          <StyledSwiperSlide>
+            <img src={imageFile[1]} /><p>2222</p>
+          </StyledSwiperSlide>
+          {/* <StyledSwiperSlide>
             <img src={image2} /><p>광화문</p>
           </StyledSwiperSlide>
           <StyledSwiperSlide>
@@ -96,7 +103,7 @@ function Main(props) {
           </StyledSwiperSlide>
           <StyledSwiperSlide>
             <img src={image9} /><p>제주 한라산</p>
-          </StyledSwiperSlide>
+          </StyledSwiperSlide> */}
       </StyledSwiper>
     </MainWrapper>
   );
