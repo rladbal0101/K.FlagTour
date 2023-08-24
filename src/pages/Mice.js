@@ -14,7 +14,7 @@ function Mice(props) {
     <>
       <SubPageStyle 
         title={'MICE'} 
-        // photo={image} 
+        photo={undefined} 
       />
 
       <MiceStyled>

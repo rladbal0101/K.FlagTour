@@ -1,20 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import SubPageStyle from '../components/SubPageStyle';
-
-// import image from '../images/남산타워.jpg';
 import { Outlet } from 'react-router';
+
+import subPageImg from "../data/subPageImgData.json";
 
 const SightseeingToursStyled = styled.div`
 
 `
 
 function SightseeingTours(props) {
+  const SightseeingImg  = subPageImg.find((img) => {
+    if(img.title === 'Sightseeing Tours') {
+      return img;
+    }
+  })
+
   return (
     <>
       <SubPageStyle 
         title={'Sightseeing Tours'} 
-        // photo={image} 
+        photo={SightseeingImg.imagePath} 
       />
 
       <SightseeingToursStyled>

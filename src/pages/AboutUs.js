@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SubPageStyle from '../components/SubPageStyle';
 
-import images from '../data/subPageImgData.json';
+import subPageImg from "../data/subPageImgData.json";
 import { Outlet } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
@@ -50,11 +50,18 @@ const SubCategory = styled(NavLink)`
 `;
 
 function AboutUs(props) {
+  const aboutImg  = subPageImg.find((img) => {
+    if(img.title === 'About us') {
+      return img;
+    }
+  })
+
+
   return (
     <>
       <SubPageStyle 
         title={'About us'} 
-        // photo={image} 
+        photo={aboutImg.imagePath} 
       />
 
       <AboutUsStyled>
