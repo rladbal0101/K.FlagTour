@@ -1,22 +1,56 @@
 [
   {
     "id": "0",
-    "imagePath": 
-      {
-        "url": "../images/ddp.jpg"
-      }
-    ,
+    "imagePath": "../images/한옥마을2.jpg",
     "title-ko": "한옥마을",
-    "title-en": "hanok"
+    "title-en": "traditional village"
   },
   {
-    "id": "0",
-    "imagePath": 
-      {
-        "url": "../images/부산.jpg"
-      }
-    ,
+    "id": "1",
+    "imagePath": "../images/광화문2.jpg",
+    "title-ko": "광화문",
+    "title-en": "Gwanghwamun"
+  },
+  {
+    "id": "2",
+    "imagePath": "../images/명동.jpg",
+    "title-ko": "명동",
+    "title-en": "Myeong-dong"
+  },
+  {
+    "id": "3",
+    "imagePath": "../images/해운대해수욕장.jpg",
+    "title-ko": "해운대해수욕장",
+    "title-en": "Haeundae Beach"
+  },
+  {
+    "id": "4",
+    "imagePath": "../images/부산.jpg",
     "title-ko": "부산",
-    "title-en": "busan"
+    "title-en": "Busan"
+  },
+  {
+    "id": "5",
+    "imagePath": "../images/경복궁-향원정 가을.jpg",
+    "title-ko": "경복궁-향원정",
+    "title-en": "Gyeongbokgung Palace - Hyangwonjeong Pavilion"
+  },
+  {
+    "id": "6",
+    "imagePath": "../images/롯데타워2.jpg",
+    "title-ko": "롯데타워",
+    "title-en": "Lotte Tower"
+  },
+  {
+    "id": "7",
+    "imagePath": "../images/경복궁-향원정 겨울.jpg",
+    "title-ko": "경복궁-향원정",
+    "title-en": "Gyeongbokgung Palace - Hyangwonjeong Pavilion"
+  },
+  {
+    "id": "8",
+    "imagePath": "../images/제주 한라산.jpg",
+    "title-ko": "제주 한라산",
+    "title-en": "Mt. Hanlla"
   }
 ]
