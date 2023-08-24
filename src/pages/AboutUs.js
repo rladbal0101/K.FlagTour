@@ -16,6 +16,12 @@ const AboutUsStyled = styled.div`
     font-size: 16px;
     margin-bottom: 80px;
 
+    &:first-child a:focus::before {
+    
+    background-color: #F37500;
+  
+    }
+
     li + li {
       padding-left: 40px;
     }
@@ -29,9 +35,10 @@ const SubCategory = styled(NavLink)`
 
   &::before {
     content: '';
-    width: 1px;
-    height: 1px;
-    border: 3px solid;
+    width: 8px;
+    height: 8px;
+    /* border: 3px solid; */
+    background-color: transparent;
     border-radius: 50%;
     color: transparent;
     /* color: #F37500; */
@@ -41,11 +48,11 @@ const SubCategory = styled(NavLink)`
   }
 
   &:hover::before {
-    color: #F37500;
+    background-color: #F37500;
   }
 
   &:focus::before {
-    color: #F37500;
+    background-color: #F37500;
   }
 `;
 
