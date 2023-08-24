@@ -1,27 +1,27 @@
 [
   {
     "id" : 1,
-    "title": "about Us",
+    "title": "About us",
     "imagePath": "../images/광화문2.jpg"
   },
   {
     "id" : 2,
-    "title": "medical Tours",
+    "title": "Medical Tours",
     "imagePath": "../images/설악산2.jpg"
   },
   {
     "id" : 3,
-    "title": "mice",
+    "title": "MICE",
     "imagePath": "../images/보성.jpg"
   },
   {
     "id" : 4,
-    "title": "sightseeing Tours",
+    "title": "Sightseeing Tours",
     "imagePath": "../images/남산타워.jpg"
   },
   {
     "id" : 5,
-    "title": "useful Information",
-    "imagePath": "../images/광화문2.jpg"
+    "title": "Useful Information",
+    "imagePath": "../images/경주 첨성대.jpg"
   }
 ]
