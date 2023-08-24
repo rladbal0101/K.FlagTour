@@ -59,7 +59,7 @@ function Main(props) {
       >
         {
           imageData.map(image =>
-            <StyledSwiperSlide>
+            <StyledSwiperSlide key={image.id}>
               <img src={image.imagePath} />
               <p>{image.titleEn}</p>
             </StyledSwiperSlide>
