@@ -1,7 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Children, cloneElement, isValidElement, useEffect, useRef, useState } from 'react';
 
 function ContactsMap(props) {
   const [map, setMap ] = useState(null);
+  const [marker, setMarker] = useState(null);
+
   const ref = useRef();
 
   useEffect(() => {
@@ -10,8 +12,35 @@ function ContactsMap(props) {
       zoom: 18,
     });
 
-    setMap(newMap);
-  }, [])
+    if (ref.current && ! map) {
+      setMap(newMap);
+    }
+
+  }, [ref, map]);
+
+  // const Marker = (options) => {
+  //   useEffect(() => {
+  //     if (!marker) {
+  //       marker.setMap(null);
+  //     };
+  
+  //     return () => {
+  //       if (marker) {
+  //         marker.setMap(null);
+  //       }
+  //     };
+  //   }, [marker]);
+  
+  //   useEffect(() => {
+  //     if (marker) {
+  //       marker.setOptions(options);
+  //     }
+  //   }, [marker, options]);
+  //   return null;
+  // };
+
+
+
 
   return (
     <div 
