@@ -20,6 +20,19 @@ const MainWrapper = styled.div`
 const StyledSwiper = styled(Swiper)`
   width: 100%;
   height: 100%;
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color: #eee;
+    text-shadow: 1px 1px 2px #333;
+  }
+
+  .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+    background-color: #eee;
+    box-shadow: 1px 1px 2px #333;
+  }
 `;
 
 const StyledSwiperSlide = styled(SwiperSlide)`
