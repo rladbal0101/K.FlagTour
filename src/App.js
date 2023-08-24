@@ -18,6 +18,7 @@ const GlobalStyled = createGlobalStyle`
   ${reset}
 
   body {
+    font-family: 'GmarketSansMedium';
     box-sizing: border-box;
   }
 

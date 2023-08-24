@@ -20,9 +20,10 @@ const HeaderStyle = styled.div`
   z-index: 9;
 
   h1 {
-    margin: 0 30px;
+    font-family: 'Giants-Bold';
     font-size: 20px;
     font-weight: 700;
+    margin: 0 30px;
 
     &:hover {
       color: red;
