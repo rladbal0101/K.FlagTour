@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import SubPageStyle from '../components/SubPageStyle';
 
-import image from '../images/광화문2.jpg';
+import images from '../data/subPageImgData.json';
 import { Outlet } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
@@ -54,7 +54,7 @@ function AboutUs(props) {
     <>
       <SubPageStyle 
         title={'About us'} 
-        photo={image} 
+        // photo={image} 
       />
 
       <AboutUsStyled>

@@ -1,6 +1,27 @@
 [
   {
     "id" : 1,
-    "imagePath": "../image/광화문2.jpg"
+    "title": "about Us",
+    "imagePath": "../images/광화문2.jpg"
+  },
+  {
+    "id" : 2,
+    "title": "medical Tours",
+    "imagePath": "../images/설악산2.jpg"
+  },
+  {
+    "id" : 3,
+    "title": "mice",
+    "imagePath": "../images/보성.jpg"
+  },
+  {
+    "id" : 4,
+    "title": "sightseeing Tours",
+    "imagePath": "../images/남산타워.jpg"
+  },
+  {
+    "id" : 5,
+    "title": "useful Information",
+    "imagePath": "../images/광화문2.jpg"
   }
 ]
