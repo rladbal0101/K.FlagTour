@@ -6,7 +6,6 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import Main from './pages/Main';
 import AboutUs from './pages/AboutUs';
-import Mice from './pages/Mice';
 import SightseeingTours from './pages/SightseeingTours';
 import MedicalTours from './pages/MedicalTours';
 import UsefulInformation from './pages/UsefulInformation';
@@ -49,7 +48,6 @@ function App() {
             <Route path='awards' element={<Award />} />
             <Route path='contacts' element={<Contacts />} />
           </Route>
-          <Route path='/mice' element={<Mice />} />
           <Route path='/signtseeing_tour' element={<SightseeingTours />}>
             <Route path='classic_tour' element={undefined} />
             <Route path='theme_tour' element={undefined} />
