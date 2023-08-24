@@ -212,14 +212,6 @@ function Layout(props) {
               </StyledSubMenu>
             </li>
             <li className='gnb-depth1-item'>
-              <StyledLink to={'/mice'}>MICE</StyledLink>
-              {/* <StyledSubMenu>
-                <ul className='gnb-depth2'>
-                  <li><StyledSubMenuLink>MICE</StyledSubMenuLink></li>
-                </ul>
-              </StyledSubMenu> */}
-            </li>
-            <li className='gnb-depth1-item'>
               <StyledLink to={'/signtseeing_tour'}>Sightseeing Tours</StyledLink>
               <StyledSubMenu className='sub-menu'>
                 <ul className='gnb-depth2'>
@@ -231,19 +223,9 @@ function Layout(props) {
             </li>
             <li className='gnb-depth1-item'>
               <StyledLink to={'/medical_tour'}>Medical Tours</StyledLink>
-              {/* <StyledSubMenu>
-                <ul className='gnb-depth2'>
-                  <li><StyledSubMenuLink>Medical tours</StyledSubMenuLink></li>
-                </ul>
-              </StyledSubMenu> */}
             </li>
             <li className='gnb-depth1-item'>
               <StyledLink to={'/useful_information'}>Useful Information</StyledLink>
-              {/* <StyledSubMenu>
-                <ul className='gnb-depth2'>
-                  <li><StyledSubMenuLink>Useful Information</StyledSubMenuLink></li>
-                </ul>
-              </StyledSubMenu> */}
             </li>
           </ul>
         </NavStyle>
