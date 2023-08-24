@@ -24,10 +24,6 @@ const HeaderStyle = styled.div`
     font-size: 20px;
     font-weight: 700;
     margin: 0 30px;
-
-    &:hover {
-      color: red;
-    }
   }
 
   svg {
@@ -35,16 +31,14 @@ const HeaderStyle = styled.div`
     margin: 0 30px;
 
     &:hover {
-      color: red;
+      color: #F37500;
     }
   }
 `;
 
 const NavStyle = styled.nav`
   width: 60%;
-  /* width: 1080px; */
   font-size: 14px;
-  /* padding: 20px; */
 
   position: absolute;
   top: 0;
@@ -63,7 +57,9 @@ const NavStyle = styled.nav`
       flex-direction: column;
       align-items: center;
 
-      
+      &:hover > .sub-menu{
+        display: block;
+      }
     }
   }
 `;
@@ -95,54 +91,29 @@ const StyledLink = styled(NavLink)`
   &:hover::after{
     width: 100%;
   }
-
-  &:hover + .sub-menu{
-    /* display: block; */
-    /* height: 150px; */
-    opacity: 1;
-
-    &:hover {
-      display: block;
-    }
-    
-    .gnb-depth2 {
-      opacity: 1;
-
-      /* &:hover {
-        opacity: 1;
-
-      } */
-    }
-  }
 `;
 
 const StyledSubMenu = styled.div`
   width: 200px;
-  /* height: 0; */
   background-color: rgba(200, 200, 200, 0.5);
   padding: 0 10px;
   position: absolute;
   top: 80px;
-  
-  transition: all 0.3s;
 
-  opacity: 0;
-
-  /* display: none; */
+  display: none;
   
   ul.gnb-depth2 {
     width: 100%;
     text-align: center;
-    /* opacity: 0; */
-    transition: all 0.3s;
-  /* 
-    display: flex;
-    flex-direction: column;
-    align-items: center; */
   }
 
   li {
     padding: 10px 0;
+
+    &:hover a {
+      font-weight: 700;
+      color: #F37500;
+    }
   }
 `;
 
@@ -153,7 +124,7 @@ const StyledSubMenuLink = styled(NavLink)`
 `;
 
 const FooterStyle = styled.div`
-  background-color: antiquewhite;
+  background-color: #eee;
   font-size: 14px;
   padding: 20px;
 
@@ -198,27 +169,27 @@ function Layout(props) {
               <StyledSubMenu className='sub-menu'>
                 <ul className='gnb-depth2'>
                   <li>
-                    <StyledSubMenuLink>Company introduction</StyledSubMenuLink>
+                    <StyledSubMenuLink to={'/about_us/company_introduction'}>Company introduction</StyledSubMenuLink>
                   </li>
                   <li>
-                    <StyledSubMenuLink>CEO greetings</StyledSubMenuLink>
+                    <StyledSubMenuLink to={'/about_us/ceo_greetings'}>CEO greetings</StyledSubMenuLink>
                   </li>
                   <li>
-                    <StyledSubMenuLink>Awards</StyledSubMenuLink>
+                    <StyledSubMenuLink to={'/about_us/awards'}>Awards</StyledSubMenuLink>
                   </li>
                   <li>
-                    <StyledSubMenuLink>Contacts</StyledSubMenuLink>
+                    <StyledSubMenuLink to={'/about_us/contacts'}>Contacts</StyledSubMenuLink>
                   </li>
                 </ul>
               </StyledSubMenu>
             </li>
             <li className='gnb-depth1-item'>
-              <StyledLink to={'/signtseeing_tour'}>Sightseeing Tours</StyledLink>
+              <StyledLink to={'/sightseeing_tour'}>Sightseeing Tours</StyledLink>
               <StyledSubMenu className='sub-menu'>
                 <ul className='gnb-depth2'>
-                  <li><StyledSubMenuLink>classic tour</StyledSubMenuLink></li>
-                  <li><StyledSubMenuLink>theme tour</StyledSubMenuLink></li>
-                  <li><StyledSubMenuLink>one day tour</StyledSubMenuLink></li>
+                  <li><StyledSubMenuLink to={'/sightseeing_tour/classic_tour'}>classic tour</StyledSubMenuLink></li>
+                  <li><StyledSubMenuLink to={'/sightseeing_tour/theme_tour'}>theme tour</StyledSubMenuLink></li>
+                  <li><StyledSubMenuLink to={'/sightseeing_tour/one_day_tour'}>one day tour</StyledSubMenuLink></li>
                 </ul>
               </StyledSubMenu>
             </li>

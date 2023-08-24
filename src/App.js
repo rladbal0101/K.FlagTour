@@ -21,8 +21,10 @@ const GlobalStyled = createGlobalStyle`
 
   body {
     font-family: 'SUIT-Regular';
+    font-weight: 600;
     line-height: 1.4; /* 행간 설정 */
     letter-spacing : 0.5px; /* 자간 설정 */
+    color: #333;
     box-sizing: border-box;
   }
 
@@ -53,7 +55,7 @@ function App() {
             <Route path='awards' element={<Award />} />
             <Route path='contacts' element={<Contacts />} />
           </Route>
-          <Route path='/signtseeing_tour' element={<SightseeingTours />}>
+          <Route path='/sightseeing_tour' element={<SightseeingTours />}>
             <Route path='classic_tour' element={undefined} />
             <Route path='theme_tour' element={undefined} />
             <Route path='one_day_tour' element={undefined} />
