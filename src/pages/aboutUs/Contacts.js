@@ -1,5 +1,5 @@
-import { Wrapper } from '@googlemaps/react-wrapper';
-import React from 'react';
+import { Status, Wrapper } from '@googlemaps/react-wrapper';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import ContactsMap from '../../components/aboutUs/ContactsMap';
 
@@ -33,6 +33,33 @@ const TextArea = styled.div`
 `;
 
 function Contacts(props) {
+  const [marker, setMarker] = useState(null);
+
+  // const render = (Status : Status) => {
+  //   return <h1>{Status}</h1>
+  // };
+
+  const Marker = (options) => {
+    useEffect(() => {
+      if (!marker) {
+        marker.setMap(null);
+      };
+  
+      return () => {
+        if (marker) {
+          marker.setMap(null);
+        }
+      };
+    }, [marker]);
+  
+    useEffect(() => {
+      if (marker) {
+        marker.setOptions(options);
+      }
+    }, [marker, options]);
+    return null;
+  };
+
   return (
     <MapStyle>
       <h3>본사</h3>
@@ -40,7 +67,9 @@ function Contacts(props) {
         apiKey={'AIzaSyBG5fsredbEt1FTtZN0qu_vMe2YtVwWqRM'}
         libraries={"place"}
         >
-        <ContactsMap />
+        <ContactsMap>
+          {/* <Marker position={position} /> */}
+        </ContactsMap>
       </Wrapper>
 
       <TextArea>
