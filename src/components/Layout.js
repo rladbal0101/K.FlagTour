@@ -8,9 +8,9 @@ const LayoutStyle = styled.div`
 `;
 
 const HeaderStyle = styled.div`
-  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 80px;
+  background-color: #00235C;
 
   display: flex;
   justify-content: space-between;
@@ -21,14 +21,16 @@ const HeaderStyle = styled.div`
 
   h1 {
     font-family: 'Giants-Bold';
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 700;
     margin: 0 30px;
+    color: #fff;
   }
 
   svg {
     font-size: 20px;
     margin: 0 30px;
+    color: #eee;
 
     &:hover {
       color: #F37500;
@@ -38,7 +40,7 @@ const HeaderStyle = styled.div`
 
 const NavStyle = styled.nav`
   width: 60%;
-  font-size: 14px;
+  font-size: 18px;
 
   position: absolute;
   top: 0;
@@ -57,6 +59,10 @@ const NavStyle = styled.nav`
       flex-direction: column;
       align-items: center;
 
+      & a {
+        font-weight: 700;
+      }
+
       &:hover > .sub-menu{
         display: block;
       }
@@ -65,7 +71,7 @@ const NavStyle = styled.nav`
 `;
 
 const StyledLink = styled(NavLink)`
-  color: #000;
+  color: #eee;
   text-decoration: none;
   padding: 32px 10px;
   border-bottom: 2px solid transparent;
@@ -88,15 +94,19 @@ const StyledLink = styled(NavLink)`
 
   }
 
-  &:hover::after{
-    width: 100%;
+  &:hover{
+    color: #F37500;
+
+    &::after{
+      width: 100%;
+    }
   }
 `;
 
 const StyledSubMenu = styled.div`
   width: 200px;
-  background-color: rgba(200, 200, 200, 0.5);
-  padding: 0 10px;
+  padding: 0 15px;
+  background-color: #00235C;
   position: absolute;
   top: 80px;
 
@@ -110,6 +120,10 @@ const StyledSubMenu = styled.div`
   li {
     padding: 10px 0;
 
+    &:hover {
+
+    }
+
     &:hover a {
       font-weight: 700;
       color: #F37500;
@@ -119,13 +133,14 @@ const StyledSubMenu = styled.div`
 
 const StyledSubMenuLink = styled(NavLink)`
   width: 100%;
-  color: #000;
+  color: #eee;
   text-decoration: none;
 `;
 
 const FooterStyle = styled.div`
-  background-color: #eee;
+  color: #eee;
   font-size: 14px;
+  background-color: #00235C;
   padding: 20px;
 
   display: flex;
