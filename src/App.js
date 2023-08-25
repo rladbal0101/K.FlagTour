@@ -21,7 +21,6 @@ const GlobalStyled = createGlobalStyle`
 
   body {
     font-family: 'SUIT-Regular';
-    font-weight: 600;
     line-height: 1.4; /* 행간 설정 */
     letter-spacing : 0.5px; /* 자간 설정 */
     color: #333;
