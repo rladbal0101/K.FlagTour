@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 // 메인 슬라이드 이미지 파일
-import imageData from "../data/mainSlideImgData.json";
+import imageData from "../data/mainImgData.json";
 
 const MainWrapper = styled.div`
   width: 100%;
