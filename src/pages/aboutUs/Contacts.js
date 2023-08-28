@@ -62,7 +62,7 @@ function Contacts(props) {
 
       <TextArea>
         <span> 주소: &nbsp; </span>
-        <p>서울특별시 마포구 만리재로 51</p>
+        <p>서울특별시 영등포구 의사당대로1길 11</p>
       </TextArea>
 
       <TextArea>
