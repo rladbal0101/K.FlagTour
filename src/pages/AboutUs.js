@@ -65,9 +65,9 @@ function AboutUs(props) {
     }
   });
 
-  const handleClicked = (e) => {
-    setIsClicked(true);
-  }
+  // const handleClicked = (e) => {
+  //   setIsClicked(true);
+  // }
 
 
   return (
@@ -79,7 +79,7 @@ function AboutUs(props) {
 
       <AboutUsStyled>
         <ul>
-          <li onClick={handleClicked}><SubCategory to={'/about_us/company_introduction'}>Company introduction</SubCategory></li>
+          <li><SubCategory to={'/about_us/company_introduction'}>Company introduction</SubCategory></li>
           <li><SubCategory to={'/about_us/ceo_greetings'}>CEO greetings</SubCategory></li>
           <li><SubCategory to={'/about_us/awards'}>Awards</SubCategory></li>
           <li><SubCategory to={'/about_us/contacts'}>Contacts</SubCategory></li>

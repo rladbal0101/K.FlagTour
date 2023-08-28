@@ -13,6 +13,9 @@ import CompanyIntroduction from './pages/aboutUs/CompanyIntroduction';
 import CeoGreetings from './pages/aboutUs/CeoGreetings';
 import Award from './pages/aboutUs/Award';
 import Contacts from './pages/aboutUs/Contacts';
+import ClassicTour from './pages/SightseeingTours/ClassicTour';
+import ThemeTour from './pages/SightseeingTours/ThemeTour';
+import OneDayTour from './pages/SightseeingTours/OneDayTour';
 
 // const apiKey = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
 
@@ -54,10 +57,11 @@ function App() {
             <Route path='awards' element={<Award />} />
             <Route path='contacts' element={<Contacts />} />
           </Route>
-          <Route path='/sightseeing_tour' element={<SightseeingTours />}>
-            <Route path='classic_tour' element={undefined} />
-            <Route path='theme_tour' element={undefined} />
-            <Route path='one_day_tour' element={undefined} />
+          <Route path='/sightseeing_tour/' element={<SightseeingTours />}>
+            <Route index element={<ClassicTour />} />
+            <Route path='classic_tour' element={<ClassicTour />} />
+            <Route path='theme_tour' element={<ThemeTour />} />
+            <Route path='one_day_tour' element={<OneDayTour />} />
           </Route>
           <Route path='/medical_tour' element={<MedicalTours/>} />
           <Route path='/useful_information' element={<UsefulInformation />} />
