@@ -47,21 +47,14 @@ const SubCategory = styled(NavLink)`
     margin-bottom: 15px;
   }
 
-  &:hover::before {
-    background-color: #F37500;
-  }
-
-  &:focus::before {
+  &:hover::before,
+  &.active::before {
     background-color: #F37500;
   }
 `;
 
 function SightseeingTours(props) {
-  const SightseeingImg  = subPageImg.find((img) => {
-    if(img.title === 'Sightseeing Tours') {
-      return img;
-    }
-  })
+  const SightseeingImg  = subPageImg.find((img) => img.title === 'Sightseeing Tours');
 
   return (
     <>
@@ -72,9 +65,27 @@ function SightseeingTours(props) {
 
       <SightseeingToursStyled>
         <ul>
-          <li><SubCategory to={'/sightseeing_tour/classic_tour'}>Classic Tour</SubCategory></li>
-          <li><SubCategory to={'/sightseeing_tour/theme_tour'}>Theme Tour</SubCategory></li>
-          <li><SubCategory to={'/sightseeing_tour/one_day_tour'}>One Day Tour</SubCategory></li>
+          <li>
+            <SubCategory 
+              to={'/sightseeing_tour/classic_tour'}
+            >
+              Classic Tour
+            </SubCategory>
+          </li>
+          <li>
+            <SubCategory 
+              to={'/sightseeing_tour/theme_tour'}
+            >
+              Theme Tour
+            </SubCategory>
+          </li>
+          <li>
+            <SubCategory 
+              to={'/sightseeing_tour/one_day_tour'}
+            >
+              One Day Tour
+            </SubCategory>
+          </li>
         </ul>
 
         <Outlet />
