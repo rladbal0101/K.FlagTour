@@ -35,7 +35,7 @@ function UsefulInformation(props) {
         photo={usefulImg.imagePath} 
       />
 
-      <UsefulInformationStyled>
+      {/* <UsefulInformationStyled>
         <Document
           file={`https://drive.google.com/uc?id=1JEoE2M8f7ATsdbzRE6L0cmaUQhHN_iJq`}
           // file={"/brochure.pdf"}
@@ -63,7 +63,7 @@ function UsefulInformation(props) {
         <a href='/brochure.pdf' download>
           PDF 다운로드
         </a>
-      </UsefulInformationStyled>
+      </UsefulInformationStyled> */}
     </>
   );
 }
