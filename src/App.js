@@ -13,9 +13,9 @@ import CompanyIntroduction from './pages/aboutUs/CompanyIntroduction';
 import CeoGreetings from './pages/aboutUs/CeoGreetings';
 import Award from './pages/aboutUs/Award';
 import Contacts from './pages/aboutUs/Contacts';
-import ClassicTour from './pages/SightseeingTours/ClassicTour';
-import ThemeTour from './pages/SightseeingTours/ThemeTour';
-import OneDayTour from './pages/SightseeingTours/OneDayTour';
+import ClassicTour from './pages/sightseeingTours/ClassicTour';
+import ThemeTour from './pages/sightseeingTours/ThemeTour';
+import OneDayTour from './pages/sightseeingTours/OneDayTour';
 
 // const apiKey = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
 
