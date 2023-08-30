@@ -199,7 +199,7 @@ function Layout(props) {
               </StyledSubMenu>
             </li>
             <li className='gnb-depth1-item'>
-              <StyledLink to={'/sightseeing_tour'}>Sightseeing Tours</StyledLink>
+              <StyledLink to={'/sightseeing_tour/classic_tour'}>Sightseeing Tours</StyledLink>
               <StyledSubMenu className='sub-menu'>
                 <ul className='gnb-depth2'>
                   <li><StyledSubMenuLink to={'/sightseeing_tour/classic_tour'}>classic tour</StyledSubMenuLink></li>
