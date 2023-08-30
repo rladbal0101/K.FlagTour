@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import SubPageStyle from '../components/SubPageStyle';
 
@@ -17,9 +17,7 @@ const AboutUsStyled = styled.div`
     margin-bottom: 80px;
 
     &:first-child a:focus::before {
-    
     background-color: #F37500;
-  
     }
 
     li + li {
@@ -32,6 +30,7 @@ const SubCategory = styled(NavLink)`
   font-weight: 600;
   color: #000;
   text-decoration: none;
+  outline: none;
 
   &::before {
     content: '';
@@ -47,28 +46,15 @@ const SubCategory = styled(NavLink)`
     margin-bottom: 15px;
   }
 
-  &:hover::before {
-    background-color: #F37500;
-  }
-
-  &:focus::before {
+  &:hover::before,
+  &.active::before {
     background-color: #F37500;
   }
 `;
 
 function AboutUs(props) {
-  const [isClicked, setIsClicked] = useState(false);
 
-  const aboutImg  = subPageImg.find((img) => {
-    if(img.title === 'About us') {
-      return img;
-    }
-  });
-
-  // const handleClicked = (e) => {
-  //   setIsClicked(true);
-  // }
-
+  const aboutImg  = subPageImg.find((img) => img.title === 'About us');
 
   return (
     <>
@@ -79,10 +65,34 @@ function AboutUs(props) {
 
       <AboutUsStyled>
         <ul>
-          <li><SubCategory to={'/about_us/company_introduction'}>Company introduction</SubCategory></li>
-          <li><SubCategory to={'/about_us/ceo_greetings'}>CEO greetings</SubCategory></li>
-          <li><SubCategory to={'/about_us/awards'}>Awards</SubCategory></li>
-          <li><SubCategory to={'/about_us/contacts'}>Contacts</SubCategory></li>
+          <li>
+            <SubCategory 
+              to={'/about_us/company_introduction'}
+            >
+              Company introduction
+            </SubCategory>
+          </li>
+          <li>
+            <SubCategory 
+              to={'/about_us/ceo_greetings'}
+            >
+              CEO greetings
+            </SubCategory>
+          </li>
+          <li>
+            <SubCategory 
+              to={'/about_us/awards'}
+            >
+              Awards
+            </SubCategory>
+          </li>
+          <li>
+            <SubCategory 
+              to={'/about_us/contacts'}
+            >
+              Contacts
+            </SubCategory>
+          </li>
         </ul>
         <Outlet />
       </AboutUsStyled>
