@@ -24,8 +24,6 @@ const TourItemStyle = styled.div`
 function TourItem(props) {
   const { title, photo } = props;
 
-  console.log(title);
-
   return (
     <TourItemStyle>
       <img src={photo} />
