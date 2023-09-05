@@ -99,7 +99,7 @@ function App() {
           <Route path='tour_around-korea' element={<TourAroundKorea />} />
 
           {/* theme tour page */}
-          <Route path='christmas_holidays_in_korea_december_january)' element={<ChristmasHolidaysInKorea />} />
+          <Route path='christmas_holidays_in_korea_december_january' element={<ChristmasHolidaysInKorea />} />
           <Route path='flower_festivals_in_korea_april-may' element={<FlowerFestivalsInKorea />} />
           <Route path='fall_foliage_in_korea' element={<FallFoliageInKorea />} />
           <Route path='cherry_blossom_season_in_korea' element={<CherryBlossomSeasonInKorea />} />

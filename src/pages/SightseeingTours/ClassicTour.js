@@ -20,7 +20,7 @@ function ClassicTour(props) {
         toursData.map((tour) => {
           if (tour.classicTours) {
             return tour.classicTours.map((a) => {
-              return <TourItem key={a.id} title={a.name} photo={a.imagePath} />
+              return <TourItem key={a.id} title={a.name} photo={a.imagePath} urlLastPath={a.urlLastPath} />
             })
           }
         })
