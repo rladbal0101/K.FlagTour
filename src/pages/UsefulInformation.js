@@ -8,7 +8,7 @@ import subPageImg from "../data/subPageImgData.json";
 
 const UsefulInformationStyled = styled.div`
 
-`
+`;
 
 function UsefulInformation(props) {
   const [numPages, setNumPages] = useState(null);
@@ -16,13 +16,13 @@ function UsefulInformation(props) {
 
   const onDocumentLoadSucccess = numPages => {
     setNumPages(numPages)
-  }
+  };
 
   const usefulImg  = subPageImg.find((img) => {
     if(img.title === 'Useful Information') {
       return img;
     }
-  })
+  });
 
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
