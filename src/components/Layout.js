@@ -50,7 +50,7 @@ const NavStyle = styled.nav`
 
   ul.gnb-depth1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     & > li.gnb-depth1-item {
       outline: none;
@@ -211,9 +211,9 @@ function Layout(props) {
             <li className='gnb-depth1-item'>
               <StyledLink to={'/medical_tour'}>Medical Tours</StyledLink>
             </li>
-            <li className='gnb-depth1-item'>
+            {/* <li className='gnb-depth1-item'>
               <StyledLink to={'/useful_information'}>Useful Information</StyledLink>
-            </li>
+            </li> */}
           </ul>
         </NavStyle>
 

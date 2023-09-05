@@ -88,7 +88,7 @@ function App() {
             <Route path='one_day_tour' element={<OneDayTour />} />
           </Route>
           <Route path='/medical_tour' element={<MedicalTours/>} />
-          <Route path='/useful_information' element={<UsefulInformation />} />
+          {/* <Route path='/useful_information' element={<UsefulInformation />} /> */}
 
           {/* classic tour page */}
           <Route path='seoul_tour_light' element={<SeoulTourLight />} />
@@ -119,6 +119,9 @@ function App() {
           <Route path='one_day_in_busan:_temple_and_downtown' element={<OneDayInBusanTempleAndDowntown />} />
           <Route path='islands_of_busan' element={<IslandsOfBusan />} />
           <Route path='gyeongju_city_tour' element={<GyeongjuCityTour />} />
+
+
+
         </Route>
       </Routes>
     </>

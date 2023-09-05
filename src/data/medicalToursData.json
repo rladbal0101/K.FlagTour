@@ -57,6 +57,7 @@
   {
     "title": "Overall inquiry process usually takes following steps:",
     "description": "",
+    "style": "number",
     "contents": [
       "The patient sends a detailed medical record to our staff about health problem that is to be checked or treated, such as medical treatment report, X-ray, MRI etc. If there is no previous tests, detailed information should be provided about current complaints, state and progress of the problem.",
       "K.Flag Tour medical tour staff consults with local hospitals’ staff and finds the most suitable doctors from general hospitals or specialized clinics to treat specified problem.",
