@@ -64,7 +64,7 @@ function App() {
             <Route path='one_day_tour' element={<OneDayTour />} />
           </Route>
           <Route path='/medical_tour' element={<MedicalTours/>} />
-          <Route path='/useful_information' element={<UsefulInformation />} />
+          {/* <Route path='/useful_information' element={<UsefulInformation />} /> */}
         </Route>
       </Routes>
     </>
