@@ -211,6 +211,7 @@ function Layout(props) {
             <li className='gnb-depth1-item'>
               <StyledLink to={'/medical_tour'}>Medical Tours</StyledLink>
             </li>
+            {/* useful information 메뉴 */}
             {/* <li className='gnb-depth1-item'>
               <StyledLink to={'/useful_information'}>Useful Information</StyledLink>
             </li> */}
