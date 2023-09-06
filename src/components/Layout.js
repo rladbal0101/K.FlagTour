@@ -3,6 +3,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { TbWorld } from "react-icons/tb";
 import dayjs from "dayjs";
+import logo from "../logo.png";
 
 const LayoutStyle = styled.div`
 `;
@@ -19,15 +20,13 @@ const HeaderStyle = styled.div`
   position: fixed;
   z-index: 9;
 
-  h1 {
-    font-family: 'Giants-Bold';
-    font-size: 23px;
-    font-weight: 700;
+  img {
+    width: 120px;
     margin: 0 30px;
-    color: #fff;
   }
 
-  svg {
+  /* language 메뉴 icon 스타일 */
+  /* svg {
     font-size: 20px;
     margin: 0 30px;
     color: #eee;
@@ -35,7 +34,7 @@ const HeaderStyle = styled.div`
     &:hover {
       color: #F37500;
     }
-  }
+  } */
 `;
 
 const NavStyle = styled.nav`
@@ -175,8 +174,9 @@ function Layout(props) {
   return (
     <LayoutStyle>
       <HeaderStyle>
-        <h1 className='cursor-pointer' onClick={() => navigate('/')}> K.Flag Tour </h1>
-
+        {/* <h1 className='cursor-pointer' onClick={() => navigate('/')}></h1> */}
+        <img className='cursor-pointer' onClick={() => navigate('/')} src={logo} />
+        
         <NavStyle>
           <ul className='gnb-depth1'>
             <li className='gnb-depth1-item'>
@@ -186,12 +186,12 @@ function Layout(props) {
                   <li>
                     <StyledSubMenuLink to={'/about_us/company_introduction'}>Company introduction</StyledSubMenuLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <StyledSubMenuLink to={'/about_us/ceo_greetings'}>CEO greetings</StyledSubMenuLink>
                   </li>
                   <li>
                     <StyledSubMenuLink to={'/about_us/awards'}>Awards</StyledSubMenuLink>
-                  </li>
+                  </li> */}
                   <li>
                     <StyledSubMenuLink to={'/about_us/contacts'}>Contacts</StyledSubMenuLink>
                   </li>
@@ -211,13 +211,15 @@ function Layout(props) {
             <li className='gnb-depth1-item'>
               <StyledLink to={'/medical_tour'}>Medical Tours</StyledLink>
             </li>
+            {/* useful information 메뉴 */}
             {/* <li className='gnb-depth1-item'>
               <StyledLink to={'/useful_information'}>Useful Information</StyledLink>
             </li> */}
           </ul>
         </NavStyle>
 
-        <TbWorld className='cursor-pointer' />
+        {/* language 메뉴 */}
+        {/* <TbWorld className='cursor-pointer' /> */}
       </HeaderStyle>
 
       <Outlet />

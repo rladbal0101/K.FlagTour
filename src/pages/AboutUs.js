@@ -72,7 +72,7 @@ function AboutUs(props) {
               Company introduction
             </SubCategory>
           </li>
-          <li>
+          {/* <li>
             <SubCategory 
               to={'/about_us/ceo_greetings'}
             >
@@ -85,7 +85,7 @@ function AboutUs(props) {
             >
               Awards
             </SubCategory>
-          </li>
+          </li> */}
           <li>
             <SubCategory 
               to={'/about_us/contacts'}
