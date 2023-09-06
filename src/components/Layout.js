@@ -186,12 +186,12 @@ function Layout(props) {
                   <li>
                     <StyledSubMenuLink to={'/about_us/company_introduction'}>Company introduction</StyledSubMenuLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <StyledSubMenuLink to={'/about_us/ceo_greetings'}>CEO greetings</StyledSubMenuLink>
                   </li>
                   <li>
                     <StyledSubMenuLink to={'/about_us/awards'}>Awards</StyledSubMenuLink>
-                  </li>
+                  </li> */}
                   <li>
                     <StyledSubMenuLink to={'/about_us/contacts'}>Contacts</StyledSubMenuLink>
                   </li>
