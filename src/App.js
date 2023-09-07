@@ -58,6 +58,10 @@ const GlobalStyled = createGlobalStyle`
     cursor: pointer;
   }
 
+  .inner {
+    margin: 0 150px;
+  }
+
   @media screen and (max-width: 768px) {
     
   }

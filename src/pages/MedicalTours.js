@@ -7,7 +7,7 @@ import medicalTours from "../data/medicalToursData.json";
 import MedicalTourUlStyle from '../components/MedicalTourUlStyle';
 
 const MedicalStyled = styled.div`
-  margin: 0 150px 80px 150px;
+  margin-bottom: 80px;
 `;
 
 function MedicalTours(props) {
@@ -21,9 +21,9 @@ function MedicalTours(props) {
     <>
       <SubPageStyle 
         title={'Medical Tours'} 
-        photo={medicalImg.imagePath} 
+        photo={medicalImg.imagePath}
       />
-      <MedicalStyled>
+      <MedicalStyled className='inner'>
         <p>
           K.Flag Tour provides wide range of medical tourism services. It includes body check-ups, treatment of serious diseases and plastic surgery.
         </p>
