@@ -7,7 +7,7 @@ import { Outlet } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
 const AboutUsStyled = styled.div`
-  margin: 0 150px 80px 150px;
+  margin-bottom: 80px;
 
   ul {
     display: flex;
@@ -63,7 +63,7 @@ function AboutUs(props) {
         photo={aboutImg.imagePath} 
       />
 
-      <AboutUsStyled>
+      <AboutUsStyled className='inner'>
         <ul>
           <li>
             <SubCategory 

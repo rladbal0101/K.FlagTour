@@ -7,7 +7,7 @@ import subPageImg from "../data/subPageImgData.json";
 import { NavLink } from 'react-router-dom';
 
 const SightseeingToursStyled = styled.div`
-  margin: 0 150px 80px 150px;
+  margin-bottom: 80px;
 
   ul {
     display: flex;
@@ -63,7 +63,7 @@ function SightseeingTours(props) {
         photo={SightseeingImg.imagePath} 
       />
 
-      <SightseeingToursStyled>
+      <SightseeingToursStyled className='inner'>
         <ul>
           <li>
             <SubCategory 
