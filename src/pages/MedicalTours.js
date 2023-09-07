@@ -7,7 +7,7 @@ import medicalTours from "../data/medicalToursData.json";
 import MedicalTourUlStyle from '../components/MedicalTourUlStyle';
 
 const MedicalStyled = styled.div`
-  margin-bottom: 80px;
+  margin: 40px 0 80px;
 `;
 
 function MedicalTours(props) {

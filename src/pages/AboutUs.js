@@ -7,7 +7,7 @@ import { Outlet } from 'react-router';
 import { NavLink } from 'react-router-dom';
 
 const AboutUsStyled = styled.div`
-  margin-bottom: 80px;
+  margin: 40px 0 80px;
 
   ul {
     display: flex;

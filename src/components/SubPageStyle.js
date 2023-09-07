@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const SubPageLayout = styled.div`
   padding-top: 80px;
   border-bottom: 2px solid #ddd;
-  margin-bottom: 50px;
 
   h1 {
     padding: 50px 0 30px;
