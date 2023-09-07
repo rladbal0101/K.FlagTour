@@ -7,7 +7,7 @@ import subPageImg from "../data/subPageImgData.json";
 import { NavLink } from 'react-router-dom';
 
 const SightseeingToursStyled = styled.div`
-  margin: 40px 0 80px;
+  padding: 40px 0 80px;
 
   ul {
     display: flex;
