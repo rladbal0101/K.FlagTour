@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const TourItemStyle = styled.div`
   margin: 40px;
   width: 600px;
+  /* width: 360px; */
 
   &:hover p {
     color: #F37500;
@@ -24,6 +25,15 @@ const LinkStyle = styled(Link)`
     height: 350px;
   }
 
+  /* div {
+    width: 100%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } */
+
+
   p {
     color: #000;
     font-size: 18px;
@@ -38,6 +48,7 @@ function TourItem(props) {
     <TourItemStyle >
       <LinkStyle to ={urlLastPath}>
         <img src={photo} />
+        {/* <div style={{backgroundImage: `url(${photo})`}}></div> */}
         <p>{title}</p>
       </LinkStyle>
     </TourItemStyle>
