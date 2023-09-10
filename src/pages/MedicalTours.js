@@ -21,7 +21,7 @@ function MedicalTours(props) {
     <>
       <SubPageStyle 
         title={'Medical Tours'} 
-        photo={medicalImg.imagePath}
+        // photo={medicalImg.imagePath}
       />
       <MedicalStyled className='inner'>
         <p>

@@ -32,7 +32,7 @@ function UsefulInformation(props) {
     <>
       <SubPageStyle 
         title={'Useful Information'} 
-        photo={usefulImg.imagePath} 
+        // photo={usefulImg.imagePath} 
       />
 
       {/* <UsefulInformationStyled>

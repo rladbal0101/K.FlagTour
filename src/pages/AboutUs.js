@@ -60,7 +60,7 @@ function AboutUs(props) {
     <>
       <SubPageStyle 
         title={'About us'} 
-        photo={aboutImg.imagePath} 
+        // photo={aboutImg.imagePath}
       />
 
       <AboutUsStyled className='inner'>
