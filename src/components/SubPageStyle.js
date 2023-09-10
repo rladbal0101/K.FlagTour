@@ -13,12 +13,12 @@ const SubPageLayout = styled.div`
 `
 
 const ImgStyle = styled.div`
+  display: flex;
+  justify-content: center;
+
   img {
-    width: 100%;
+    width: 60%;
     padding: 50px 0;
-    height: 60vh;
-    object-fit: cover;
-    object-position: 0% 70%;
   }
 `;
 
@@ -35,6 +35,13 @@ function SubPageStyle(props) {
       {/* <ImgStyle>
         <img src={photo} />
       </ImgStyle> */}
+
+      <ImgStyle>
+        { 
+          photo ? <img src={photo} /> : <div></div>
+        }
+      </ImgStyle>
+
     </>
   );
 }

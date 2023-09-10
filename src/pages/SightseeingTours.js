@@ -54,13 +54,13 @@ const SubCategory = styled(NavLink)`
 `;
 
 function SightseeingTours(props) {
-  const SightseeingImg  = subPageImg.find((img) => img.title === 'Sightseeing Tours');
+  // const SightseeingImg  = subPageImg.find((img) => img.title === 'Sightseeing Tours');
 
   return (
     <>
       <SubPageStyle 
         title={'Sightseeing Tours'} 
-        photo={SightseeingImg.imagePath} 
+        // photo={SightseeingImg.imagePath} 
       />
 
       <SightseeingToursStyled className='inner'>
