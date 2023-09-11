@@ -27,7 +27,7 @@ function SubPageStyle(props) {
 
   return (
     <>
-      <SubPageLayout className='inner'>
+      <SubPageLayout>
         <h1>{title}</h1>
       </SubPageLayout>
 

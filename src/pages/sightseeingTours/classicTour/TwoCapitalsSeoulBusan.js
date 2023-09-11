@@ -6,11 +6,11 @@ import tourData from "../../../data/sightseeingToursData.json";
 
 function TwoCapitalsSeoulBusan(props) {
 
-  const a = tourData[0].classicTours[2];
+  const classicTourData = tourData[0].classicTours[2];
 
   return (
     <div>
-      <SubPageStyle title={a.name} photo={a.imagePath} />
+      <SubPageStyle title={classicTourData.name} photo={classicTourData.imagePath} />
     </div>
   );
 }
