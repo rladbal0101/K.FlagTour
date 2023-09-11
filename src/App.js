@@ -62,8 +62,91 @@ const GlobalStyled = createGlobalStyle`
     margin: 0 150px;
   }
 
-  @media screen and (max-width: 768px) {
+  .highlight-red {
+    color: #f00;
+  }
+
+  /* classic tour 공통 스타일 */
+  .day-section {
     
+    & + & {
+      margin-top: 50px;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: #eee;
+      margin: 20px 0;
+    }
+  }
+
+  .day-title {
+    font-size: 30px;
+    font-weight: 600;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: #eee;
+      margin: 20px 0;
+    }
+  }
+
+  .tour-title {
+    color: #f00;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .tour-list-style {
+    list-style-type: disc;
+
+    span {
+      font-weight: 600;
+    }
+
+    .tour-description {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      p {
+        width: 70%;
+        font-size: 14px;
+        flex: 1;
+      }
+
+      img {
+        width: 30%;
+        min-width: 200px;
+        margin-left: 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .tour-list-style {
+
+      .tour-description {
+    
+        p {
+          width: 100%;
+          /* flex: 0; */
+        }
+    
+        img {
+          width: 100%;
+          margin-top: 30px;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 375px) {
