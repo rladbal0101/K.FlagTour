@@ -5,8 +5,6 @@ import SubPageStyle from '../../../components/SubPageStyle';
 
 function SeoulTourLight(props) {
 
-  console.log(tourData[0].classicTours);
-
   const classicTourData = tourData[0].classicTours[0];
 
   return (
