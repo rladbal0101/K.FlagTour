@@ -9,7 +9,7 @@ function ThreeCapitalsOfKoreaSeoulBusanGyeongju(props) {
   const classicTourData = tourData[0].classicTours[3];
 
   return (
-    <div>
+    <div className='inner'>
       <SubPageStyle title={classicTourData.name} photo={classicTourData.imagePath} />
 
       <section className='day-section'>
