@@ -115,6 +115,10 @@ const GlobalStyled = createGlobalStyle`
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      
+      & + .tour-description {
+        margin-top: 20px;
+      }
 
       p {
         width: 70%;

@@ -7,11 +7,11 @@ function SeoulTourLight(props) {
 
   console.log(tourData[0].classicTours);
 
-  const a = tourData[0].classicTours[0];
+  const classicTourData = tourData[0].classicTours[0];
 
   return (
     <div className='inner'>
-      <SubPageStyle title={a.name} photo={a.imagePath} />
+      <SubPageStyle title={classicTourData.name} photo={classicTourData.imagePath} />
 
       <section className='day-section'>
         <h2 className='day-title'>DAY 1</h2>
@@ -25,7 +25,61 @@ function SeoulTourLight(props) {
 
       <section className='day-section'>
         <h2 className='day-title'>DAY 2</h2>
-        <h3 className='tour-title'>INCHEON ARRIVAL/SEOUL</h3>
+        <h3 className='tour-title'>SEOUL (hotel breakfast/lunch)</h3>
+        <ul className='tour-list-style'>
+          <li><span>Seoul</span> City Highlight tour in historical center:</li>
+          <li>
+            <div className='tour-description'>
+              <p>
+                <span className='highlight-red'>Gwanghwamun Square</span> stretches out from Gwanghwamun Gate, once the main gate of Gyeongbokgung Palace, to Sejongno Sageori Intersection. Gwanghwamun Square is divided into six sections. At its center stands a statue of King Sejong the Great, the fourth and most respected king of the Joseon Dynasty and creator of Hangeul, Korea’s alphabet; and a statue of Admiral Yi Sunshin, a naval commander noted for his victories against the Japanese navy during the Japanese invasions of Korea (1592-1598) and a hero among Koreans. Other attractions include the popular 12.23 Fountain, a sculpture of Haechi (the symbol of Seoul), a flower carpet, and Yeoksamulgil (or the “Waterway of History”) on either side of the square.
+              </p>
+              <img src='http://janetourdmc.com/wp-content/uploads/2019/02/1.jpg' />
+            </div>
+            <div className='tour-description'>
+              <p>
+                <span className='highlight-red'>Gyeongbokgung Place</span> – built in 1395, Gyeongbokgung Palace is also commonly referred to as the Northern Palace because its location is furthest north when compared to the neighboring palaces of Changdeokgung (Eastern Palace) and Gyeonghuigung (Western Palace) Palace. Gyeongbokgung Palace is arguably the most beautiful, and remains the largest of all five palaces. The premises were once destroyed by fire during the Imjin War (Japanese Invasions, 1592-1598). However, all of the palace buildings were later restored under the leadership of Heungseondaewongun during the reign of King Gojong (1852-1919). 
+              </p>
+              <img src='http://janetourdmc.com/wp-content/uploads/2019/02/1.-Seoul-Tour-light.jpg' />
+            </div>
+            <div className='tour-description'>
+              <p>
+                <span>
+                  OPTIONAL: Traditional costume experience – wearing hanbok in the palace. <br />
+                  From 15$/pax
+                </span>
+              </p>
+              <img src='http://janetourdmc.com/wp-content/uploads/2021/09/3-1.jpg' />
+            </div>
+            <div className='tour-description'>
+              <p>
+                <span className='highlight-red'>Insadong Antique Alley</span> is “well known as a traditional street to both locals and foreigners” and represents the “culture of the past and the present”. It contains a mixture of historical and modern atmosphere and is a “unique area of Seoul that truly represents the cultural history of the nation.” The area is well known for sightseeing, with approximately 100,000 visitors on Sundays reported in 2000. Insadong is also a visiting spot for foreign dignitaries such as Queen Elizabeth II and the princes of Spain and the Netherlands. It contains 40 percent of the nation’s antique shops and art galleries as well as 90 percent of the traditional stationery shops.
+              </p>
+              <img src='http://janetourdmc.com/wp-content/uploads/2021/11/3.jpg' />
+            </div>
+            <div className='tour-description'>
+              <p>
+                <span className='highlight-red'>Jogyesa Temple</span> is the center of Korean Buddhism. The temple was built in the late 14th century during the Goryeo period and was once turned into ashes due to fire and was rebuilt under the name of Gackhwangsa Temple in 1910 with the effort of many respectful monks, namely Han Yong-un and Lee Hee-gwang. The temple was given a role as the head temple of Korea’s Buddhism and renamed to Tegosa Temple in 1936. In 1954, a purification drive took place to eliminate Japanese influence and revive traditional Buddhism, which established the present day Jogyesa Temple as a result.
+              </p>
+              <img src='http://janetourdmc.com/wp-content/uploads/2021/11/4.jpg' />
+            </div>
+          </li>
+          <li>
+            <div>
+              <p>
+                <span></span>
+              </p>
+              <img src='' />
+            </div>
+          </li>
+
+
+
+        </ul>
+      </section>
+
+      <section className='day-section'>
+        <h2 className='day-title'>DAY 2</h2>
+        <h3 className='tour-title'>SEOUL (hotel breakfast/lunch)</h3>
         <ul className='tour-list-style'>
           <li><span>Seoul</span> City Highlight tour in historical center:
           </li>
