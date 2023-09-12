@@ -28,11 +28,14 @@ function TourAroundKorea(props) {
         <ul className='tour-list-style'>
           <li>
           </li>
-          <li className='tour-description'>
-            <p>
-            </p>
-            <img src='http://janetourdmc.com/wp-content/uploads/2019/02/1.jpg' />
-          </li>
+          
+          <div className='tour-description'>
+              <p>
+                <span className='highlight-red'> </span>
+                
+              </p>
+              <img src='http://janetourdmc.com/wp-content/uploads/2019/02/1.jpg' />
+            </div>
         </ul>
       </section>
     </div>
