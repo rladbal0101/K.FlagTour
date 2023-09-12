@@ -119,18 +119,30 @@ const GlobalStyled = createGlobalStyle`
       & + .tour-description {
         margin-top: 20px;
       }
-
+      
       p {
         width: 70%;
         font-size: 14px;
         flex: 1;
       }
-
+      
       img {
         width: 30%;
         min-width: 200px;
         margin-left: 30px;
       }
+      
+      .option-group {
+        flex: 1;
+        
+        p {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    li + .tour-description {
+      margin-top: 20px;
     }
   }
 
