@@ -25,8 +25,8 @@ function SeoulTourLight(props) {
         <h2 className='day-title'>DAY 2</h2>
         <h3 className='tour-title'>SEOUL (hotel breakfast/lunch)</h3>
         <ul className='tour-list-style'>
-          <li><span>Seoul</span> City Highlight tour in historical center:</li>
           <li>
+            <p><span>Seoul</span> City Highlight tour in historical center:</p>
             <div className='tour-description'>
               <p>
                 <span className='highlight-red'>Gwanghwamun Square</span> stretches out from Gwanghwamun Gate, once the main gate of Gyeongbokgung Palace, to Sejongno Sageori Intersection. Gwanghwamun Square is divided into six sections. At its center stands a statue of King Sejong the Great, the fourth and most respected king of the Joseon Dynasty and creator of Hangeul, Korea’s alphabet; and a statue of Admiral Yi Sunshin, a naval commander noted for his victories against the Japanese navy during the Japanese invasions of Korea (1592-1598) and a hero among Koreans. Other attractions include the popular 12.23 Fountain, a sculpture of Haechi (the symbol of Seoul), a flower carpet, and Yeoksamulgil (or the “Waterway of History”) on either side of the square.
@@ -60,6 +60,9 @@ function SeoulTourLight(props) {
               </p>
               <img src='http://janetourdmc.com/wp-content/uploads/2021/11/4.jpg' />
             </div>
+          </li>
+          <li>
+            
           </li>
           <li>
             <div>

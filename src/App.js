@@ -99,12 +99,13 @@ const GlobalStyled = createGlobalStyle`
 
   .tour-title {
     color: #f00;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
   }
 
   .tour-list-style {
     list-style-type: disc;
+    font-size: 20px;
 
     span {
       font-weight: 600;
@@ -122,7 +123,7 @@ const GlobalStyled = createGlobalStyle`
 
       p {
         width: 70%;
-        font-size: 14px;
+        font-size: 16px;
         flex: 1;
       }
 
