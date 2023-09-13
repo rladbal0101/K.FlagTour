@@ -62,37 +62,43 @@ function SeoulTourLight(props) {
             </div>
           </li>
           <li>
-            
-          </li>
-          <li>
-            <div>
+            <p>Visit to <span>Namsangol Hanok Village</span></p>
+            <div className='tour-description'>
               <p>
-                <span></span>
+                <span className='highlight-red'>Namsangol Hanok Village</span> opened in 1998 on the north side of Namsan Mountain in the center of the capital. This village has five restored traditional Korean houses, a pavilion, traditional garden, performance arts stage and a time capsule plaza, making it a perfect spot for both locals and tourists to take a leisure walk. Upon entering from the front gate, visitors will get a taste of the traditional life while escaping from the bustling city life of modern times. The traditional garden with its pavilion and the traditional houses create a peaceful ambiance before the forested Namsan Mountain. A time capsule commemorating Seoul’s 600 Year Anniversary was buried in 1994 at the highest point of the village and is scheduled to be reopened four hundred years later in 2394.
               </p>
-              <img src='' />
+              <img src='http://janetourdmc.com/wp-content/uploads/2021/09/2.-Seoul-Tour-with-plenty-of-excursions-1024x684.jpg' />
             </div>
           </li>
-
-
-
+          <li>
+            <p>Visit to <span>Namsan Seoul Tower</span> by cable car</p>
+            <div className='tour-description'>
+              <p>
+                <span className='highlight-red'>N-Seoul Tower:</span> The top of the tower is at almost 480 meters above sea level, including Namsan Mountain (243m) and the tower’s own height (236.7m), making it one of the tallest towers in Asia. It is comprised of Seoul Tower Plaza, recently opened to public access after 40 years, and N Seoul Tower, operated by CJ Foodville since 2005. The tower was first established as a broadcasting tower to send out TV and radio signals in 1969. As of now, it has become one of the representative landmarks and multi-cultural venues in Seoul.
+              </p>
+              <img src='http://janetourdmc.com/wp-content/uploads/2021/09/6-1.jpg' />
+            </div>
+          </li>
+          <li><span>FREE TIME</span></li>
         </ul>
       </section>
 
       <section className='day-section'>
-        <h2 className='day-title'>DAY 2</h2>
-        <h3 className='tour-title'>SEOUL (hotel breakfast/lunch)</h3>
+        <h2 className='day-title'>DAY 3-6</h2>
+        <h3 className='tour-title'>SEOUL (hotel breakfast)</h3>
         <ul className='tour-list-style'>
-          <li><span>Seoul</span> City Highlight tour in historical center:
-          </li>
-          <li className='tour-description'>
-            <p>
-              Gwanghwamun Square stretches out from Gwanghwamun Gate, once the main gate of Gyeongbokgung Palace, to Sejongno Sageori Intersection. Gwanghwamun Square is divided into six sections. At its center stands a statue of King Sejong the Great, the fourth and most respected king of the Joseon Dynasty and creator of Hangeul, Korea’s alphabet; and a statue of Admiral Yi Sunshin, a naval commander noted for his victories against the Japanese navy during the Japanese invasions of Korea (1592-1598) and a hero among Koreans. Other attractions include the popular 12.23 Fountain, a sculpture of Haechi (the symbol of Seoul), a flower carpet, and Yeoksamulgil (or the “Waterway of History”) on either side of the square.
-            </p>
-            <img src='http://janetourdmc.com/wp-content/uploads/2019/02/1.jpg' />
-          </li>
+          <li><span>FREE TIME</span></li>
         </ul>
       </section>
-
+      
+      <section className='day-section'>
+        <h2 className='day-title'>DAY 7</h2>
+        <h3 className='tour-title'>SEOUL / DEPARTURE FROM INCHEON (hotel breakfast)</h3>
+        <ul className='tour-list-style'>
+          <li>Hotel check out</li>
+          <li>Transfer to <span>Incheon International Airport</span>. Departure from Korea</li>
+        </ul>
+      </section>
     </div>
   );
 }
