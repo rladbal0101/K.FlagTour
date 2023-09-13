@@ -142,6 +142,10 @@ const GlobalStyled = createGlobalStyle`
       }
     }
 
+    li{
+      margin-top: 10px;
+    }
+
     li + .tour-description {
       margin-top: 20px;
     }

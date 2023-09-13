@@ -57,13 +57,13 @@ function SightseeingTours(props) {
   // const SightseeingImg  = subPageImg.find((img) => img.title === 'Sightseeing Tours');
 
   return (
-    <>
+    <div className='inner'>
       <SubPageStyle 
         title={'Sightseeing Tours'} 
         // photo={SightseeingImg.imagePath} 
       />
 
-      <SightseeingToursStyled className='inner'>
+      <SightseeingToursStyled>
         <ul>
           <li>
             <SubCategory 
@@ -90,7 +90,7 @@ function SightseeingTours(props) {
 
         <Outlet />
       </SightseeingToursStyled>
-    </>
+    </div>
   );
 }
 

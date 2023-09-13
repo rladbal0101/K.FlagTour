@@ -57,13 +57,13 @@ function AboutUs(props) {
   const aboutImg  = subPageImg.find((img) => img.title === 'About us');
 
   return (
-    <>
+    <div className='inner'>
       <SubPageStyle 
         title={'About us'} 
         // photo={aboutImg.imagePath}
       />
 
-      <AboutUsStyled className='inner'>
+      <AboutUsStyled>
         <ul>
           <li>
             <SubCategory 
@@ -96,7 +96,7 @@ function AboutUs(props) {
         </ul>
         <Outlet />
       </AboutUsStyled>
-    </>
+    </div>
   );
 }
 

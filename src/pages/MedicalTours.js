@@ -18,12 +18,12 @@ function MedicalTours(props) {
   })
 
   return (
-    <>
+    <div className='inner'>
       <SubPageStyle 
         title={'Medical Tours'} 
         // photo={medicalImg.imagePath}
       />
-      <MedicalStyled className='inner'>
+      <MedicalStyled>
         <p>
           K.Flag Tour provides wide range of medical tourism services. It includes body check-ups, treatment of serious diseases and plastic surgery.
         </p>
@@ -38,7 +38,7 @@ function MedicalTours(props) {
           )
         }
       </MedicalStyled>
-    </>
+    </div>
   );
 }
 
