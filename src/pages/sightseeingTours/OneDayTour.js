@@ -18,7 +18,7 @@ function OneDayTour(props) {
         toursData.map((tour) => {
           if (tour.onedayTours) {
             return tour.onedayTours.map((a) => {
-              return <TourItem key={a.id} title={a.name} photo={a.imagePath} />
+              return <TourItem key={a.id} title={a.name} photo={a.imagePath} urlLastPath={a.urlLastPath} />
             })
           }
         })
