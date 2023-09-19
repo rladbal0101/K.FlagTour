@@ -18,7 +18,8 @@ function ThemeTour(props) {
         toursData.map((tour) => {
           if (tour.themeTours) {
             return tour.themeTours.map((a) => {
-              return <TourItem key={a.id} title={a.name} photo={a.imagePath} />
+              console.log(a);
+              return <TourItem key={a.id} title={a.name} photo={a.imagePath} urlLastPath={a.urlLastPath} />
             })
           }
         })
