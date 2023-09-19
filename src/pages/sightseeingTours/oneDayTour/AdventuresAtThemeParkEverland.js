@@ -3,16 +3,13 @@ import SubPageStyle from '../../../components/SubPageStyle';
 
 import tourData from "../../../data/sightseeingToursData.json";
 
-
 function AdventuresAtThemeParkEverland(props) {
 
-  const classicTourData = tourData;
-
-  console.log(classicTourData);
+  const onedayTourData = tourData[2].onedayTours[6];
 
   return (
-    <div>
-      {/* <SubPageStyle title={classicTourData.name} photo={classicTourData.imagePath} /> */}
+    <div className='inner'>
+      <SubPageStyle title={onedayTourData.name} photo={onedayTourData.imagePath} />
       
     </div>
   );
