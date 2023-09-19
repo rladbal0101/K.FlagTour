@@ -151,6 +151,24 @@ const GlobalStyled = createGlobalStyle`
     }
   }
 
+  /* theme tour & oneday tour 공통 스타일 */
+  .tour-section {
+    font-size: 20px;
+    
+    p + p {
+      margin-top: 50px;
+    }
+
+    &::before, &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background-color: #eee;
+      margin: 20px 0;
+    }
+  }
+
   @media screen and (max-width: 768px) {
 
     .tour-list-style {

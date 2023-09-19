@@ -7,7 +7,7 @@ import toursData from "../../data/sightseeingToursData.json";
 const OneDayTourStyle = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 `
 

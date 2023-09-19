@@ -7,7 +7,7 @@ import toursData from "../../data/sightseeingToursData.json";
 const ClassicTourStyle = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 `
 
