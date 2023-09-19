@@ -9,6 +9,10 @@ const TourItemStyle = styled.div`
   &:hover p {
     color: #F37500;
   }
+
+  @media screen and (max-width: 767px) {
+    margin: 22px 0;
+  }
 `;
 
 const LinkStyle = styled(Link)`
@@ -32,13 +36,20 @@ const LinkStyle = styled(Link)`
     font-size: 18px;
     padding-top: 50px;
   }
+
+  @media screen and (max-width: 767px) {
+    p {
+      font-size: 14px;
+      padding-top: 20px;
+    }
+  }
 `;
 
 function TourItem(props) {
   const { title, photo, urlLastPath } = props;
 
   return (
-    <TourItemStyle >
+    <TourItemStyle className='tour-item-style'>
       <LinkStyle to ={urlLastPath}>
         <div style={{backgroundImage: `url(${photo})`}}></div>
         <p>{title}</p>

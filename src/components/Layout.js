@@ -2,6 +2,9 @@ import React from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { TbWorld } from "react-icons/tb";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
+
 import dayjs from "dayjs";
 import logo from "../logo.png";
 
@@ -37,6 +40,7 @@ const HeaderStyle = styled.div`
   } */
 `;
 
+// PC용 메뉴
 const NavStyle = styled.nav`
   width: 60%;
   font-size: 18px;
@@ -66,6 +70,9 @@ const NavStyle = styled.nav`
         display: block;
       }
     }
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 `;
 
@@ -136,6 +143,113 @@ const StyledSubMenuLink = styled(NavLink)`
   text-decoration: none;
 `;
 
+// 모바일용 메뉴
+const MobileNavStyle = styled.nav`
+
+  /* display: none; */
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+  }
+
+  ul.gnb-depth1 {
+    /* display: flex;
+    justify-content: space-around; */
+
+    & > li.gnb-depth1-item {
+      outline: none;
+      font-weight: normal;
+      /* display: flex; */
+      flex-direction: column;
+      align-items: center;
+
+      & a {
+        font-weight: 700;
+      }
+
+      &:hover > .sub-menu{
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+`;
+
+const MobileMenuModal = styled.div`
+  width: 240px;
+  height: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  background-color: rgba(0, 35, 92, 0.9);
+
+  svg {
+    
+  }
+
+  ul {
+    margin-top: 20px;
+
+    li {
+      padding: 10px 0;
+    }
+  }
+`;
+
+const MobileStyledLink = styled(NavLink)`
+  /* color: #eee; */
+  color: #F37500;
+
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+
+  position: relative;
+
+  &:hover{
+    /* color: #F37500; */
+  }
+`;
+
+const MobileStyledSubMenu = styled.div`
+
+  /* display: none; */
+  
+  ul.gnb-depth2 {
+    width: 100%;
+  }
+  
+  li {
+    padding: 10px 0;
+
+    &:hover {
+
+    }
+
+    &:hover a {
+      font-weight: 700;
+      color: #F37500;
+    }
+  }
+`;
+
+const MobileStyledSubMenuLink = styled(NavLink)`
+  color: #eee;
+  font-size: 13px;
+  text-decoration: none;
+
+`;
+
+
+// 푸터
 const FooterStyle = styled.div`
   color: #eee;
   font-size: 14px;
@@ -160,7 +274,7 @@ const FooterStyle = styled.div`
   li + li {
     margin-left: 30px;
   }
-  `;
+`;
 
 function Layout(props) {
   let now = dayjs();
@@ -177,6 +291,7 @@ function Layout(props) {
         {/* <h1 className='cursor-pointer' onClick={() => navigate('/')}></h1> */}
         <img className='cursor-pointer' onClick={() => navigate('/')} src={logo} />
         
+        {/* PC용 메뉴 */}
         <NavStyle>
           <ul className='gnb-depth1'>
             <li className='gnb-depth1-item'>
@@ -220,6 +335,53 @@ function Layout(props) {
 
         {/* language 메뉴 */}
         {/* <TbWorld className='cursor-pointer' /> */}
+
+        {/* 모바일용 메뉴 */}
+        <MobileNavStyle>
+          <GiHamburgerMenu />
+          <MobileMenuModal>
+            <AiOutlineClose />
+            <ul className='gnb-depth1'>
+              <li className='gnb-depth1-item'>
+                <MobileStyledLink to={'/about_us/company_introduction'}>About us</MobileStyledLink>
+                <MobileStyledSubMenu className='sub-menu'>
+                  <ul className='gnb-depth2'>
+                    <li>
+                      <MobileStyledSubMenuLink to={'/about_us/company_introduction'}>Company introduction</MobileStyledSubMenuLink>
+                    </li>
+                    {/* <li>
+                      <MobileStyledSubMenuLink to={'/about_us/ceo_greetings'}>CEO greetings</MobileStyledSubMenuLink>
+                    </li>
+                    <li>
+                      <MobileStyledSubMenuLink to={'/about_us/awards'}>Awards</MobileStyledSubMenuLink>
+                    </li> */}
+                    <li>
+                      <MobileStyledSubMenuLink to={'/about_us/contacts'}>Contacts</MobileStyledSubMenuLink>
+                    </li>
+                  </ul>
+                </MobileStyledSubMenu>
+              </li>
+              <li className='gnb-depth1-item'>
+                <MobileStyledLink to={'/sightseeing_tour/classic_tour'}>Sightseeing Tours</MobileStyledLink>
+                <MobileStyledSubMenu className='sub-menu'>
+                  <ul className='gnb-depth2'>
+                    <li><MobileStyledSubMenuLink to={'/sightseeing_tour/classic_tour'}>classic tour</MobileStyledSubMenuLink></li>
+                    <li><MobileStyledSubMenuLink to={'/sightseeing_tour/theme_tour'}>theme tour</MobileStyledSubMenuLink></li>
+                    <li><MobileStyledSubMenuLink to={'/sightseeing_tour/one_day_tour'}>one day tour</MobileStyledSubMenuLink></li>
+                  </ul>
+                </MobileStyledSubMenu>
+              </li>
+              <li className='gnb-depth1-item'>
+                <MobileStyledLink to={'/medical_tour'}>Medical Tours</MobileStyledLink>
+              </li>
+              {/* useful information 메뉴 */}
+              {/* <li className='gnb-depth1-item'>
+                <MobileStyledLink to={'/useful_information'}>Useful Information</MobileStyledLink>
+              </li> */}
+            </ul>
+          </MobileMenuModal>
+        </MobileNavStyle>
+
       </HeaderStyle>
 
       <Outlet />

@@ -17,16 +17,23 @@ const SightseeingToursStyled = styled.div`
     margin-bottom: 80px;
 
     &:first-child a:focus::before {
-    
-    background-color: #F37500;
-
+      background-color: #F37500;
     }
 
     li + li {
       padding-left: 40px;
     }
+    
   }
-`
+  @media screen and (max-width: 767px) {
+    padding: 30px 0 80px;
+
+    ul {
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+  }
+`;
 
 const SubCategory = styled(NavLink)`
   font-weight: 600;
@@ -37,11 +44,9 @@ const SubCategory = styled(NavLink)`
     content: '';
     width: 8px;
     height: 8px;
-    /* border: 3px solid; */
     background-color: transparent;
     border-radius: 50%;
     color: transparent;
-    /* color: #F37500; */
     display: flex;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -54,8 +59,6 @@ const SubCategory = styled(NavLink)`
 `;
 
 function SightseeingTours(props) {
-  // const SightseeingImg  = subPageImg.find((img) => img.title === 'Sightseeing Tours');
-
   return (
     <div className='inner'>
       <SubPageStyle 

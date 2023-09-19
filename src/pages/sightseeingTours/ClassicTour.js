@@ -9,11 +9,9 @@ const ClassicTourStyle = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-`
-
+`;
 
 function ClassicTour(props) {
-
   return (
     <ClassicTourStyle>
       {

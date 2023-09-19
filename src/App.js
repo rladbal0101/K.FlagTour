@@ -59,7 +59,7 @@ const GlobalStyled = createGlobalStyle`
   }
 
   .inner {
-    margin: 0 150px;
+    margin: 0 120px;
   }
 
   .highlight-red {
@@ -81,103 +81,154 @@ const GlobalStyled = createGlobalStyle`
       background-color: #eee;
       margin: 20px 0;
     }
-  }
 
-  .day-title {
-    font-size: 30px;
-    font-weight: 600;
-
-    &::after {
-      content: "";
-      width: 100%;
-      height: 1px;
-      display: block;
-      background-color: #eee;
-      margin: 20px 0;
+    .day-title {
+      font-size: 30px;
+      font-weight: 600;
+  
+      &::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        display: block;
+        background-color: #eee;
+        margin: 20px 0;
+      }
     }
-  }
-
-  .tour-title {
-    color: #f00;
-    font-size: 22px;
-    font-weight: 600;
-  }
-
-  .tour-list-style {
-    list-style-type: disc;
-    font-size: 20px;
-
-    span {
+  
+    .tour-title {
+      color: #f00;
+      font-size: 22px;
       font-weight: 600;
     }
+  
+    .tour-list-style {
+      font-size: 20px;
+      
+      li {
+        list-style-type: disc;
+        list-style-position: inside;
+        padding-left: 20px;
 
-    .tour-description {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      
-      & + .tour-description {
-        margin-top: 20px;
-      }
-      
-      p {
-        width: 70%;
-        font-size: 16px;
-        flex: 1;
-      }
-      
-      img {
-        width: 30%;
-        min-width: 200px;
-        margin-left: 30px;
-      }
-      
-      .option-group {
-        flex: 1;
-        
         p {
-          margin-bottom: 20px;
+          display: initial;
         }
       }
-    }
 
-    li{
-      margin-top: 10px;
-    }
-
-    li + .tour-description {
-      margin-top: 20px;
+      span {
+        font-weight: 600;
+      }
+  
+      .tour-description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+        & + .tour-description {
+          margin-top: 20px;
+        }
+        
+        p {
+          width: 70%;
+          font-size: 16px;
+          flex: 1;
+        }
+        
+        img {
+          width: 30%;
+          min-width: 200px;
+          margin: 0 0 0 30px;
+        }
+        
+        .option-group {
+          flex: 1;
+          
+          p {
+            margin-bottom: 20px;
+          }
+        }
+      }
+  
+      li{
+        margin-top: 10px;
+      }
+  
+      li + .tour-description {
+        margin-top: 20px;
+      }
     }
   }
 
   /* theme tour & oneday tour 공통 스타일 */
-  .tour-section {
-    font-size: 20px;
-    
-    p + p {
-      margin-top: 50px;
+  .tour-wrap {
+    display: flex;
+    padding: 50px 0;
+
+    .tour-img {
+      width: 35%;
+      min-width: 250px;
+
+      img {
+        width: 100%;
+      }
     }
 
-    &::before, &::after {
-      content: "";
-      width: 100%;
-      height: 1px;
-      display: block;
-      background-color: #eee;
-      margin: 20px 0;
+    .tour-section {
+      width: 65%;
+      font-size: 20px;
+      margin: 0 0 0 50px;
+      
+      p + p {
+        margin-top: 50px;
+      }
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
+    .inner {
+      margin: 0 100px;
+    }
 
+    /* classic tour 공통 스타일 */
+    .day-section {
+
+      .day-title {
+        font-size: 22px;
+      }
+      .tour-title {
+        font-size: 20px;
+      }
+      .tour-list-style {
+        font-size: 18px;
+
+        .tour-description {
+          padding: 15px 0;
+          flex-direction: column-reverse;
+          
+          p {
+            width: 100%;
+            font-size: 14px;
+          }
+          img {
+            width: 100%;
+            margin: 0 0 15px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .inner {
+      margin: 0 50px;
+    }
     .tour-list-style {
 
       .tour-description {
     
         p {
           width: 100%;
-          /* flex: 0; */
         }
     
         img {
@@ -186,10 +237,80 @@ const GlobalStyled = createGlobalStyle`
         }
       }
     }
+
+    /* classic tour 공통 스타일 */
+    .day-section {
+
+      .day-title {
+        font-size: 20px;
+      }
+      .tour-title {
+        font-size: 18px;
+      }
+      .tour-list-style {
+        font-size: 16px;
+
+        .tour-description {
+          p {
+            font-size: 12px;
+          }
+
+        }
+      }
+    }
+
+    /* theme tour & oneday tour 공통 스타일 */
+    .tour-wrap {
+      padding: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      .tour-img {
+        width: 100%;
+      }
+
+      .tour-section {
+        width: 100%;
+        font-size: 18px;
+        margin: 0;
+    
+        &::before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          display: block;
+          background-color: #eee;
+          margin: 20px 0;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 375px) {
+    .inner {
+      margin: 0 20px;
+    }
 
+    /* classic tour 공통 스타일 */
+    .day-section {
+
+      .day-title {
+        font-size: 18px;
+      }
+      .tour-title {
+        font-size: 16px;
+      }
+      .tour-list-style {
+        font-size: 14px;
+
+        .tour-description {
+          p {
+            font-size: 12px;
+          }
+
+        }
+      }
+    }
   }
 `;
 

@@ -10,7 +10,13 @@ const SubPageLayout = styled.div`
     font-size: 40px;
     font-weight: 700;
   }
-`
+
+  @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 25px;
+    }
+  }
+`;
 
 const ImgStyle = styled.div`
   display: flex;
@@ -19,6 +25,12 @@ const ImgStyle = styled.div`
   img {
     width: 60%;
     padding: 50px 0;
+  }
+  
+  @media screen and (max-width: 767px) {
+    img {
+      width: 100%;
+    }
   }
 `;
 
@@ -32,10 +44,6 @@ function SubPageStyle(props) {
       </SubPageLayout>
 
       {/* 서브페이지 상단 이미지 */}
-      {/* <ImgStyle>
-        <img src={photo} />
-      </ImgStyle> */}
-
       <ImgStyle>
         { 
           photo ? <img src={photo} /> : <div></div>

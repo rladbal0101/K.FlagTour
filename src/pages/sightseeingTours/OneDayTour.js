@@ -9,7 +9,7 @@ const OneDayTourStyle = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-`
+`;
 
 function OneDayTour(props) {
   return (
