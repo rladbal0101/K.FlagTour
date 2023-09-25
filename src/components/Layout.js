@@ -231,32 +231,6 @@ const MobileNavStyle = styled.nav`
   }
 `;
 
-const MobileMenuModal = styled.div`
-  width: 240px;
-  height: 100%;
-  padding: 30px;
-  box-sizing: border-box;
-  text-align: right;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: rgba(0, 35, 92, 0.9);
-
-  display: none;
-
-  svg {
-    
-  }
-
-  ul {
-    margin-top: 20px;
-
-    li {
-      padding: 10px 0;
-    }
-  }
-`;
-
 const MobileStyledLink = styled(NavLink)`
   color: #F37500;
 
@@ -272,8 +246,6 @@ const MobileStyledLink = styled(NavLink)`
 
 const MobileStyledSubMenu = styled.div`
 
-  /* display: none; */
-  
   ul.mobile-gnb-depth2 {
     width: 100%;
   }
@@ -297,7 +269,6 @@ const MobileStyledSubMenuLink = styled(NavLink)`
   font-size: 13px;
   text-decoration: none;
 `;
-
 
 // 푸터
 const FooterStyle = styled.div`
@@ -338,13 +309,11 @@ function Layout(props) {
   const navigate = useNavigate();
 
   const toggleMenu = () => {
-    // console.log('클릭');
     setMenuOpen(menuOpen => !menuOpen);
   };
 
   return (
     <LayoutStyle>
-      
       {/* PC용 메뉴 */}
       <HeaderStyle>
         <img className='cursor-pointer' onClick={() => navigate('/')} src={logo} />
@@ -400,50 +369,48 @@ function Layout(props) {
         {
           menuOpen ?
             <MobileNavStyle className='mobile-menu'>
-                {/* <MobileMenuModal> */}
-                  <AiOutlineClose className='mobile-menu-close cursor-pointer' onClick={() => toggleMenu()} />
-                  <ul className='mobile-gnb-depth1'>
-                    <li className='mobile-gnb-depth1-item'>
-                      <MobileStyledLink to={'/about_us/company_introduction'}>About us</MobileStyledLink>
-                      <MobileStyledSubMenu className='mobile-sub-menu'>
-                        <ul className='mobile-gnb-depth2'>
-                          <li>
-                            <MobileStyledSubMenuLink to={'/about_us/company_introduction'}>Company introduction</MobileStyledSubMenuLink>
-                          </li>
-                          {/* <li>
-                            <MobileStyledSubMenuLink to={'/about_us/ceo_greetings'}>CEO greetings</MobileStyledSubMenuLink>
-                          </li>
-                          <li>
-                            <MobileStyledSubMenuLink to={'/about_us/awards'}>Awards</MobileStyledSubMenuLink>
-                          </li> */}
-                          <li>
-                            <MobileStyledSubMenuLink to={'/about_us/contacts'}>Contacts</MobileStyledSubMenuLink>
-                          </li>
-                        </ul>
-                      </MobileStyledSubMenu>
-                    </li>
-                    <li className='mobile-gnb-depth1-item'>
-                      <MobileStyledLink to={'/sightseeing_tour/classic_tour'}>Sightseeing Tours</MobileStyledLink>
-                      <MobileStyledSubMenu className='sub-menu'>
-                        <ul className='mobile-gnb-depth2'>
-                          <li><MobileStyledSubMenuLink to={'/sightseeing_tour/classic_tour'}>classic tour</MobileStyledSubMenuLink></li>
-                          <li><MobileStyledSubMenuLink to={'/sightseeing_tour/theme_tour'}>theme tour</MobileStyledSubMenuLink></li>
-                          <li><MobileStyledSubMenuLink to={'/sightseeing_tour/one_day_tour'}>one day tour</MobileStyledSubMenuLink></li>
-                        </ul>
-                      </MobileStyledSubMenu>
-                    </li>
-                    <li className='mobile-gnb-depth1-item'>
-                      <MobileStyledLink to={'/medical_tour'}>Medical Tours</MobileStyledLink>
-                    </li>
-                    {/* useful information 메뉴 */}
-                    {/* <li className='mobile-gnb-depth1-item'>
-                      <MobileStyledLink to={'/useful_information'}>Useful Information</MobileStyledLink>
-                    </li> */}
-                  </ul>
-                {/* </MobileMenuModal> */}
+              <AiOutlineClose className='mobile-menu-close cursor-pointer' onClick={toggleMenu} />
+              <ul className='mobile-gnb-depth1'>
+                <li className='mobile-gnb-depth1-item'>
+                  <MobileStyledLink to={'/about_us/company_introduction'} onClick={toggleMenu}>About us</MobileStyledLink>
+                  <MobileStyledSubMenu className='mobile-sub-menu' onClick={toggleMenu}>
+                    <ul className='mobile-gnb-depth2'>
+                      <li>
+                        <MobileStyledSubMenuLink to={'/about_us/company_introduction'}>Company introduction</MobileStyledSubMenuLink>
+                      </li>
+                      {/* <li>
+                        <MobileStyledSubMenuLink to={'/about_us/ceo_greetings'}>CEO greetings</MobileStyledSubMenuLink>
+                      </li>
+                      <li>
+                        <MobileStyledSubMenuLink to={'/about_us/awards'}>Awards</MobileStyledSubMenuLink>
+                      </li> */}
+                      <li>
+                        <MobileStyledSubMenuLink to={'/about_us/contacts'}>Contacts</MobileStyledSubMenuLink>
+                      </li>
+                    </ul>
+                  </MobileStyledSubMenu>
+                </li>
+                <li className='mobile-gnb-depth1-item'>
+                  <MobileStyledLink to={'/sightseeing_tour/classic_tour'} onClick={toggleMenu}>Sightseeing Tours</MobileStyledLink>
+                  <MobileStyledSubMenu className='mobile-sub-menu' onClick={toggleMenu}>
+                    <ul className='mobile-gnb-depth2'>
+                      <li><MobileStyledSubMenuLink to={'/sightseeing_tour/classic_tour'}>classic tour</MobileStyledSubMenuLink></li>
+                      <li><MobileStyledSubMenuLink to={'/sightseeing_tour/theme_tour'}>theme tour</MobileStyledSubMenuLink></li>
+                      <li><MobileStyledSubMenuLink to={'/sightseeing_tour/one_day_tour'}>one day tour</MobileStyledSubMenuLink></li>
+                    </ul>
+                  </MobileStyledSubMenu>
+                </li>
+                <li className='mobile-gnb-depth1-item'>
+                  <MobileStyledLink to={'/medical_tour'} onClick={toggleMenu}>Medical Tours</MobileStyledLink>
+                </li>
+                {/* useful information 메뉴 */}
+                {/* <li className='mobile-gnb-depth1-item'>
+                  <MobileStyledLink to={'/useful_information'} onClick={toggleMenu}>Useful Information</MobileStyledLink>
+                </li> */}
+              </ul>
             </MobileNavStyle>
             :
-            <GiHamburgerMenu className='mobile-menu-hamburger cursor-pointer' onClick={() => toggleMenu()} />
+            <GiHamburgerMenu className='mobile-menu-hamburger cursor-pointer' onClick={toggleMenu} />
         }
       </MobileHeaderStyle>
 
