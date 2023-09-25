@@ -320,25 +320,30 @@ function Layout(props) {
         <NavStyle>
           <ul className='gnb-depth1'>
             <li className='gnb-depth1-item'>
-              <StyledLink to={'/about_us/company_introduction'}>About us</StyledLink>
-              <StyledSubMenu className='sub-menu'>
+              <StyledLink to={'/about_us'}>About us</StyledLink>
+              {/* <StyledSubMenu className='sub-menu'>
                 <ul className='gnb-depth2'>
                   <li>
                     <StyledSubMenuLink to={'/about_us/company_introduction'}>Company introduction</StyledSubMenuLink>
                   </li>
-                  {/* <li>
+                  <li>
                     <StyledSubMenuLink to={'/about_us/ceo_greetings'}>CEO greetings</StyledSubMenuLink>
                   </li>
                   <li>
                     <StyledSubMenuLink to={'/about_us/awards'}>Awards</StyledSubMenuLink>
-                  </li> */}
-                  <li>
-                    <StyledSubMenuLink to={'/about_us/contacts'}>Contacts</StyledSubMenuLink>
                   </li>
+                </ul>
+              </StyledSubMenu> */}
+            </li>
+            <li className='gnb-depth1-item'>
+              <StyledLink to={'/tours/classic_tour'}>Tours</StyledLink>
+              <StyledSubMenu className='sub-menu'>
+                <ul className='gnb-depth2'>
+                  <li><StyledSubMenuLink to={'/tours/classic_tour'}>classic tour</StyledSubMenuLink></li>
                 </ul>
               </StyledSubMenu>
             </li>
-            <li className='gnb-depth1-item'>
+            {/* <li className='gnb-depth1-item'>
               <StyledLink to={'/sightseeing_tour/classic_tour'}>Sightseeing Tours</StyledLink>
               <StyledSubMenu className='sub-menu'>
                 <ul className='gnb-depth2'>
@@ -347,7 +352,7 @@ function Layout(props) {
                   <li><StyledSubMenuLink to={'/sightseeing_tour/one_day_tour'}>one day tour</StyledSubMenuLink></li>
                 </ul>
               </StyledSubMenu>
-            </li>
+            </li> */}
             <li className='gnb-depth1-item'>
               <StyledLink to={'/medical_tour'}>Medical Tours</StyledLink>
             </li>
@@ -355,6 +360,9 @@ function Layout(props) {
             {/* <li className='gnb-depth1-item'>
               <StyledLink to={'/useful_information'}>Useful Information</StyledLink>
             </li> */}
+            <li className='gnb-depth1-item'>
+              <StyledLink to={'/contact_us'}>Contact us</StyledLink>
+            </li>
           </ul>
         </NavStyle>
         {/* language 메뉴 */}
@@ -372,25 +380,30 @@ function Layout(props) {
               <AiOutlineClose className='mobile-menu-close cursor-pointer' onClick={toggleMenu} />
               <ul className='mobile-gnb-depth1'>
                 <li className='mobile-gnb-depth1-item'>
-                  <MobileStyledLink to={'/about_us/company_introduction'} onClick={toggleMenu}>About us</MobileStyledLink>
-                  <MobileStyledSubMenu className='mobile-sub-menu' onClick={toggleMenu}>
+                  <MobileStyledLink to={'/about_us'} onClick={toggleMenu}>About us</MobileStyledLink>
+                  {/* <MobileStyledSubMenu className='mobile-sub-menu' onClick={toggleMenu}>
                     <ul className='mobile-gnb-depth2'>
                       <li>
                         <MobileStyledSubMenuLink to={'/about_us/company_introduction'}>Company introduction</MobileStyledSubMenuLink>
                       </li>
-                      {/* <li>
+                      <li>
                         <MobileStyledSubMenuLink to={'/about_us/ceo_greetings'}>CEO greetings</MobileStyledSubMenuLink>
                       </li>
                       <li>
                         <MobileStyledSubMenuLink to={'/about_us/awards'}>Awards</MobileStyledSubMenuLink>
-                      </li> */}
-                      <li>
-                        <MobileStyledSubMenuLink to={'/about_us/contacts'}>Contacts</MobileStyledSubMenuLink>
                       </li>
+                    </ul>
+                  </MobileStyledSubMenu> */}
+                </li>
+                <li className='mobile-gnb-depth1-item'>
+                  <MobileStyledLink to={'/tours/classic_tour'} onClick={toggleMenu}>Tours</MobileStyledLink>
+                  <MobileStyledSubMenu className='mobile-sub-menu' onClick={toggleMenu}>
+                    <ul className='mobile-gnb-depth2'>
+                      <li><MobileStyledSubMenuLink to={'/tours/classic_tour'}>classic tour</MobileStyledSubMenuLink></li>
                     </ul>
                   </MobileStyledSubMenu>
                 </li>
-                <li className='mobile-gnb-depth1-item'>
+                {/* <li className='mobile-gnb-depth1-item'>
                   <MobileStyledLink to={'/sightseeing_tour/classic_tour'} onClick={toggleMenu}>Sightseeing Tours</MobileStyledLink>
                   <MobileStyledSubMenu className='mobile-sub-menu' onClick={toggleMenu}>
                     <ul className='mobile-gnb-depth2'>
@@ -399,7 +412,7 @@ function Layout(props) {
                       <li><MobileStyledSubMenuLink to={'/sightseeing_tour/one_day_tour'}>one day tour</MobileStyledSubMenuLink></li>
                     </ul>
                   </MobileStyledSubMenu>
-                </li>
+                </li> */}
                 <li className='mobile-gnb-depth1-item'>
                   <MobileStyledLink to={'/medical_tour'} onClick={toggleMenu}>Medical Tours</MobileStyledLink>
                 </li>
@@ -407,6 +420,9 @@ function Layout(props) {
                 {/* <li className='mobile-gnb-depth1-item'>
                   <MobileStyledLink to={'/useful_information'} onClick={toggleMenu}>Useful Information</MobileStyledLink>
                 </li> */}
+                <li className='mobile-gnb-depth1-item'>
+                  <MobileStyledLink to={'/contact_us'}>Contact us</MobileStyledLink>
+                </li>
               </ul>
             </MobileNavStyle>
             :

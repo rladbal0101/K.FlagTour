@@ -13,17 +13,19 @@ const ClassicTourStyle = styled.div`
 
 function ClassicTour(props) {
   return (
-    <ClassicTourStyle>
-      {
-        toursData.map((tour) => {
-          if (tour.classicTours) {
-            return tour.classicTours.map((a) => {
-              return <TourItem key={a.id} title={a.name} photo={a.imagePath} urlLastPath={a.urlLastPath} />
-            })
-          }
-        })
-      }
-    </ClassicTourStyle>
+    <div className='inner'>
+      <ClassicTourStyle>
+        {
+          toursData.map((tour) => {
+            if (tour.classicTours) {
+              return tour.classicTours.map((a) => {
+                return <TourItem key={a.id} title={a.name} photo={a.imagePath} urlLastPath={a.urlLastPath} />
+              })
+            }
+          })
+        }
+      </ClassicTourStyle>
+    </div>
   );
 }
 
