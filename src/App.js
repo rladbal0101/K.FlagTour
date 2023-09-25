@@ -6,13 +6,14 @@ import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 import Main from './pages/Main';
 import AboutUs from './pages/AboutUs';
+import Tours from './pages/Tours';
 import SightseeingTours from './pages/SightseeingTours';
 import MedicalTours from './pages/MedicalTours';
 import UsefulInformation from './pages/UsefulInformation';
 import CompanyIntroduction from './pages/aboutUs/CompanyIntroduction';
 import CeoGreetings from './pages/aboutUs/CeoGreetings';
 import Award from './pages/aboutUs/Award';
-import Contacts from './pages/aboutUs/Contacts';
+import ContactUs from './pages/ContactUs';
 import ClassicTour from './pages/sightseeingTours/ClassicTour';
 import ThemeTour from './pages/sightseeingTours/ThemeTour';
 import OneDayTour from './pages/sightseeingTours/OneDayTour';
@@ -321,21 +322,26 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path='/about_us/' element={<AboutUs />}>
-            <Route index element={<CompanyIntroduction />} />
-            <Route path='company_introduction' element={<CompanyIntroduction />} />
+          <Route path='/about_us' element={<AboutUs />}>
+            {/* <Route index element={<CompanyIntroduction />} /> */}
+            {/* <Route path='company_introduction' element={<CompanyIntroduction />} />
             <Route path='ceo_greetings' element={<CeoGreetings />} />
-            <Route path='awards' element={<Award />} />
-            <Route path='contacts' element={<Contacts />} />
+            <Route path='awards' element={<Award />} /> */}
+            {/* <Route path='contacts' element={<Contacts />} /> */}
           </Route>
-          <Route path='/sightseeing_tour/' element={<SightseeingTours />}>
+
+          {/* 세분화된 투어 메뉴 사용시 아래코드 사용 */}
+          {/* <Route path='/sightseeing_tour/' element={<SightseeingTours />}> */}
+          <Route path='/tours/' element={<Tours />}>
             <Route index element={<ClassicTour />} />
             <Route path='classic_tour' element={<ClassicTour />} />
-            <Route path='theme_tour' element={<ThemeTour />} />
-            <Route path='one_day_tour' element={<OneDayTour />} />
+            {/* <Route path='theme_tour' element={<ThemeTour />} />
+            <Route path='one_day_tour' element={<OneDayTour />} /> */}
           </Route>
+
           <Route path='/medical_tour' element={<MedicalTours/>} />
           {/* <Route path='/useful_information' element={<UsefulInformation />} /> */}
+          <Route path='/contact_us' element={<ContactUs />} />
 
           {/* classic tour page */}
           <Route path='seoul_tour_light' element={<SeoulTourLight />} />
@@ -366,8 +372,6 @@ function App() {
           <Route path='one_day_in_busan:_temple_and_downtown' element={<OneDayInBusanTempleAndDowntown />} />
           <Route path='islands_of_busan' element={<IslandsOfBusan />} />
           <Route path='gyeongju_city_tour' element={<GyeongjuCityTour />} />
-
-
 
         </Route>
       </Routes>
