@@ -221,6 +221,10 @@ const GlobalStyled = createGlobalStyle`
   }
 
   @media screen and (max-width: 767px) {
+    p, span {
+      font-size: 14px;
+    }
+
     .inner {
       margin: 0 50px;
     }

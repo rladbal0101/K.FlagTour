@@ -36,6 +36,12 @@ const OurServices = styled.div`
   p + p {
     padding-top: 20px;
   }
+
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 22px;
+    }
+  }
 `;
 
 const SubCategory = styled(NavLink)`

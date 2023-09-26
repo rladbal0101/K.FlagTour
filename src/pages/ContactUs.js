@@ -61,19 +61,19 @@ function ContactUs(props) {
         </MapWrapper>
 
         <TextArea>
-          <span> Adress: &nbsp; </span>
-          <p>11, Uisadang-daero 1-gil, Yeongdeungpo-gu, Seoul, Republic of Korea</p>
+          <span> Adress&nbsp;:</span>
+          <p>&nbsp;11, Uisadang-daero 1-gil, Yeongdeungpo-gu, Seoul, Republic of Korea</p>
         </TextArea>
 
         <TextArea>
-          <span> Tel: &nbsp; </span>
+          <span>Tel&nbsp;:&nbsp;</span>
           <p className='linkStyle cursor-pointer'>02-786-0978</p>
-          <span>&nbsp;/ Fax: &nbsp; </span>
+          <span>&nbsp;/ Fax&nbsp;:&nbsp;</span>
           <p className='linkStyle cursor-pointer'>02-786-0980</p>
         </TextArea>
 
         <TextArea>
-          <span> E-mail: &nbsp; </span>
+          <span>E-mail&nbsp;:&nbsp;</span>
           <p className='linkStyle cursor-pointer'>yhj0726@gmail.com</p>
         </TextArea>
       </ContactUsStyled>
